@@ -1,0 +1,28 @@
+.infoPageContainer {
+   
+    background-image: url("../../assets/infoPageBackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    animation: slide 1.5s ease-in-out; 
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(-150%);
+    }
+}
+.infoPageContainer>p{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: white;
+}

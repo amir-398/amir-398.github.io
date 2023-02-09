@@ -1,0 +1,71 @@
+.homeContainer {
+    position: absolute;
+    background-image: url("../../assets/homeBackground.png");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.homeContainerTransition{
+    animation: slideUp 1.5s ease-in-out;
+    transform: translateY(-100%);
+}
+@keyframes slideUp {
+    from {
+      transform: translateY(0%);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+  }
+  .infoPageContainerTransition{
+    animation: slide 1.5s ease-in-out;
+}
+@keyframes slide {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+.homeContainer > h3 {
+    position: absolute;
+    top: 0;
+    left: 5rem;
+    color: white;
+    font-size: 32px;
+    font-weight: 400;
+}
+.homeContainer > h1 {
+    margin: 0;
+    color: #B740A7;
+    font-size: 96px;
+    line-height: 112px;
+}
+.homeContainer > h2 {
+    margin: 0;
+    margin-top: 2rem;
+    color: white;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+}
+.homeContainer > button {
+    position: absolute;
+    bottom: 5rem;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+    width: 332px;
+    height: 76px;
+    border-radius: 50px;
+    background-color: #332569;
+    border: none;
+    cursor: pointer;
+}
