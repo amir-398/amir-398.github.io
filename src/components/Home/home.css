@@ -1,6 +1,6 @@
 .homeContainer {
     position: absolute;
-    background-image: url("../../assets/homeBackground.png");
+    background-image: url("../../assets/svg/bck.png");
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -14,12 +14,121 @@
     animation: slideUp 1.5s ease-in-out;
     transform: translateY(-100%);
 }
-@keyframes slideUp {
-    from {
-      transform: translateY(0%);
+.earth{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70rem;
+    height: 50rem;
+}
+.rock{
+    position: absolute;
+    height:15rem;
+    width: 15rem;
+    left: 5rem;
+    bottom: 5rem;
+    animation : 10s infinite test;
+}
+@keyframes test {
+   0% {
+        transform: translateY(0);
+   } 
+    50% {
+          transform: translateY(1.5rem);
+    }
+}
+.rock1{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    top: 10rem;
+    right: 40rem;
+    animation : 10s infinite test;
+-webkit-animation : 10s infinite test;
+}
+.littleRocks{
+    position : absolute;
+    bottom: 5rem;
+    right: 10rem;
+    width: 10rem;
+    height: 5rem;
+    animation : 10s infinite test;
+}
+.rockDown{
+    position: absolute;
+    width: 3rem;
+    height:3rem;
+    top: 10rem;
+    left: 30rem;
+    animation : 10s infinite test;
+}
+.rocket{
+    position: absolute;
+    width: 3rem;
+    height: 6rem;
+    right: 13rem;
+    bottom: 10rem;
+    animation : 10s infinite rocket;
+}
+@keyframes rocket {
+    0% {
+        transform: rotate(120deg) translateX(0);
+   } 
+    50% {
+          transform: rotate(120deg) translateX(1.5rem);
+    }
+    100%{
+        transform: rotate(120deg);
+    }
+}
+.rocketLaunch{
+    position: absolute;
+    width: 3rem;
+    height: 6rem;
+    right: 13rem;
+    bottom: 10rem;
+    animation : 5s ease-out forwards rocketLaunch,5s ease-out forwards 5s rocketDown ;
+    transform: rotate(180deg);
+}
+.rocketContainer{
+    position: absolute;
+    right: 14.3rem;
+    bottom: 15rem;
+    border: 3px solid blue;
+    animation: 2s ease-in-out forwards trace ;
+}
+@keyframes trace {
+    from{
+        height: 0;
     }
     to {
-      transform: translateY(-100%);
+        height: 110px;
+    }
+}
+@keyframes rocketLaunch {
+   from {
+    transform: rotate(120deg) ;
+   }
+   to{
+    transform: rotate(180deg) ;
+   }
+}
+@keyframes rocketDown {
+    from {
+    bottom : 10rem;
+    }
+    to{
+     bottom : -50px;
+    }
+ }
+
+
+@keyframes slideUp {
+    from {
+      transform:  translateY(0%);
+    }
+    to {
+      transform:translateY(-100%);
     }
   }
   .infoPageContainerTransition{
