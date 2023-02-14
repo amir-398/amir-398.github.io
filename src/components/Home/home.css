@@ -1,5 +1,5 @@
 .homeContainer {
-    position: absolute;
+   display: block;
     background-image: url("../../assets/svg/bck.png");
     background-size: cover;
     height: 100vh;
@@ -123,25 +123,6 @@
  }
 
 
-@keyframes slideUp {
-    from {
-      transform:  translateY(0%);
-    }
-    to {
-      transform:translateY(-100%);
-    }
-  }
-  .infoPageContainerTransition{
-    animation: slide 1.5s ease-in-out;
-}
-@keyframes slide {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0%);
-    }
-}
 .homeContainer > h3 {
     position: absolute;
     top: 0;

@@ -22,11 +22,7 @@ export default function Home({ showInfoPage, setShowInfoPage }) {
 
   return (
     <div>
-      <div
-        className={`homeContainer ${
-          showInfoPage ? "homeContainerTransition" : ""
-        } `}
-      >
+      <div className="homeContainer">
         <h3>Resume</h3>
         <img className="rock1" src={rock} alt="the moon" />
         <img className="littleRocks" src={littleRocks} alt="the moon" />

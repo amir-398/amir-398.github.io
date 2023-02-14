@@ -13,8 +13,8 @@ export default function Index() {
   console.log("index", showInfoPage);
   return (
     <div>
-      <Home setShowInfoPage={setShowInfoPage} showInfoPage={showInfoPage} />
-      <InfoPage showInfoPage={showInfoPage} />
+      <Home />
+      <InfoPage />
     </div>
   );
 }
