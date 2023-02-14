@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import InfoPage from "../InfoPage/InfoPage";
 import home from "./home.css";
 
-import gif from "../../assets/svg/Bleu-5194.gif";
 import earth from "../../assets/svg/earth.png";
-import moon from "../../assets/svg/moon.png";
+
 import rock from "../../assets/svg/rock.png";
 import littleRocks from "../../assets/svg/little_rocks.png";
 import rockDown from "../../assets/svg/rockDown.png";
