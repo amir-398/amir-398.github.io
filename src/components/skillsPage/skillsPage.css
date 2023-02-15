@@ -1,0 +1,59 @@
+.infoPageContainer {
+    display: flex;
+    align-items: center;
+    background-image: url("../../assets/svg/bck.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+   
+   
+}
+.astronaute{
+    position: absolute;
+    right: 13rem;
+    width: 28rem;
+    height: 28rem;
+    animation: 5s infinite forwards astro;
+}
+@keyframes astro{
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+    50%{
+        transform:  translateY(10px) rotate(5deg);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.skillsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 80%;
+    flex-wrap: wrap;
+   margin-left: 5rem;
+}
+.skillsCards{
+    display: block;
+    width: 22%;
+    height: 10rem;
+   text-align: center;
+   background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,248,1) 20%, rgba(252,176,69,1) 100%);
+   border-radius: 5px;
+}
+.skillsCards >p{
+color: white;
+font-size: 1.5rem;
+font-weight: 600;
+margin-bottom: 10px;
+
+}
+.skillsCards> img{
+    width: 7rem;
+    height: 7rem;
+    
+}

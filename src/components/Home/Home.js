@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import InfoPage from "../InfoPage/InfoPage";
-import home from "./home.css";
+
+import "./home.css";
 
 import earth from "../../assets/svg/earth.png";
 
