@@ -1,5 +1,5 @@
 import React from "react";
-import moon from "../../assets/svg/moon1.png";
+
 import "./aboutMe.css";
 import Moon from "./Moon";
 

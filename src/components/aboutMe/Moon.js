@@ -1,4 +1,4 @@
-import moonTexture from "../../assets/svg/moonTexture2.png";
+import moonTexture from "../../assets/svg/moonTexture.png";
 import React, { Component } from "react";
 import * as THREE from "three";
 
