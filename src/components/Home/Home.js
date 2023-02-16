@@ -10,6 +10,8 @@ import littleRocks from "../../assets/svg/little_rocks.png";
 import rockDown from "../../assets/svg/rockDown.png";
 import rocket from "../../assets/svg/rocket.png";
 
+import AnimatedTitle from "./AnimatedTitle";
+
 export default function Home({ showInfoPage, setShowInfoPage }) {
   const [rocketLaunch, SetrocketLaunch] = useState(false);
   const handleClick = () => {
@@ -28,7 +30,7 @@ export default function Home({ showInfoPage, setShowInfoPage }) {
         <img className="littleRocks" src={littleRocks} alt="the moon" />
         <img className="rockDown" src={rockDown} alt="the moon" />
         <img className="earth" src={earth} alt="the earth" />
-        <h1 className="b">Hi, I'M AMIR</h1>
+        <AnimatedTitle />
         <h2> LET'S EXPLORE MY UNIVERSE TOGETHER</h2>
         <button onClick={rocketSubmit}>START MISSION</button>
         <img className="rock" src={rock} alt="the moon" />

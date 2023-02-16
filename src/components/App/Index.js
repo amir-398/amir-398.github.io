@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import AboutMe from "../aboutMe/AboutMe";
 import Home from "../Home/Home";
+import NeonLine from "../neonLine/NeonLine";
 import InfoPage from "../skillsPage/SkillsPage";
 export const ShowInfoPageContext = React.createContext();
 export default function Index() {
@@ -15,6 +16,7 @@ export default function Index() {
   return (
     <div>
       <Home />
+      <NeonLine />
       <AboutMe />
       <InfoPage />
     </div>

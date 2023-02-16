@@ -131,12 +131,8 @@
     font-size: 32px;
     font-weight: 400;
 }
-.homeContainer > h1 {
-    margin: 0;
-    color: #B740A7;
-    font-size: 96px;
-    line-height: 112px;
-}
+
+  
 .homeContainer > h2 {
     margin: 0;
     margin-top: 2rem;
