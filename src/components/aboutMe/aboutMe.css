@@ -1,5 +1,5 @@
 .container {
-    display: block;
+  
      background-image: url("../../assets/svg/bck.png");
      background-size: cover;
      height: 100vh;
@@ -9,6 +9,16 @@
      justify-content: space-around;
      align-items: center;
      
+ }
+ .filter{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 2s ease-in;
+ }
+ .filterGone{
+    background-color: transparent !important;
  }
  .textsContainer {
     display: flex;
@@ -28,8 +38,64 @@
     padding: 20px;
  }
 .moon{
-    margin-right: -150px;
+    margin-right: -100px;
 }
 .moonCanvas >canvas:first-child{
     display: none !important;
 }
+.show {
+    color: red;
+}
+  .guide2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap:10px ;
+    margin-right: 5rem;
+  }
+.star2{
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: transparent;
+    transition: ease-in 2s;
+}
+.starLight{
+    background-color: #fff;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+}
+.neon-line3 {
+    width: 4px;
+    background-color: #fff;
+    border-radius : 20px;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+    animation: position1 2s ease-in-out forwards,neon 1s 2s ease-in-out infinite alternate ;
+  }
+ 
+.neon-line4 {
+    width: 4px;
+    background-color: #fff;
+    border-radius : 20px;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+    animation: position1 2s 4s ease-in-out forwards,neon 1s 2s ease-in-out infinite alternate ;
+  }
+  @keyframes position1 {
+    from {
+    height: 0vh;
+    }
+    to {
+     height: 47vh;
+    }
+}
+  @keyframes neon {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff, 0 0 100px #fff;
+    }
+  }
+  

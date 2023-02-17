@@ -1,11 +1,41 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import "./aboutMe.css";
 import Moon from "./Moon";
 
-export default function AboutMe() {
+export default function AboutMe({ id }) {
+  const [animation, setAnimation] = useState(false);
+  const [starLight, setStarLight] = useState(null);
+  const [filter, setFilter] = useState(null);
+  const componentRef = useRef(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      const componentPosition = componentRef.current.getBoundingClientRect();
+
+      // On vérifie si le composant est visible dans la fenêtre
+      if (componentPosition.top <= window.innerHeight * 0.2) {
+        setAnimation(true);
+      }
+    };
+
+    // On ajoute un listener pour détecter les changements de scroll
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      // On enlève le listener quand le composant est démonté
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setStarLight("starLight");
+    }, 2000);
+    setTimeout(() => {
+      setFilter("filterGone");
+    }, 3000);
+  }, []);
   return (
-    <div className="container">
+    <div id={id} className="container" ref={componentRef}>
       <div className="textsContainer">
         <div className="textContainer">
           <p>
@@ -36,9 +66,19 @@ export default function AboutMe() {
           </p>
         </div>
       </div>
-
+      <div className={`filter ${filter}`}></div>
       <div className="moon">
         <Moon />
+      </div>
+      <div className="guide2">
+        <div style={{ height: "50vh" }}>
+          <div className="neon-line3"></div>
+        </div>
+
+        <div className={`star2 ${starLight}`}></div>
+        <div style={{ height: "50vh" }}>
+          <div className="neon-line4"></div>
+        </div>
       </div>
     </div>
   );

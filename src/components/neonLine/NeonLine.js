@@ -10,7 +10,6 @@ export default function NeonLine() {
   return (
     <div>
       <div className="neon-line"></div>
-      <div className="neon-line2"></div>;
     </div>
   );
 }

@@ -1,14 +1,19 @@
 .homeContainer {
-   display: block;
     background-image: url("../../assets/svg/bck.png");
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
+}
+@media (max-width : 1000px) {
+    .homeContainer{
+        max-width: 90%;
+    }
 }
 .homeContainerTransition{
     animation: slideUp 1.5s ease-in-out;
@@ -141,7 +146,10 @@
     font-size: 48px;
     line-height: 56px;
 }
-.homeContainer > button {
+.homeContainer > a  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 5rem;
     color: white;
@@ -155,3 +163,51 @@
     border: none;
     cursor: pointer;
 }
+.homeContainer > a > button  {
+    color: white;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.neon-line1 {
+    height: 5rem;
+    width: 4px;
+    background-color: #fff;
+    border-radius : 20px;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+    animation: neon 1s ease-in-out infinite alternate, position 1s ease-in-out forwards ;
+  }
+.neon-line2 {
+    height: 2rem;
+    width: 4px;
+    background-color: #fff;
+    border-radius : 20px;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+    animation: neon 1s ease-in-out infinite alternate, position 1s ease-in-out forwards ;
+  }
+  @keyframes neon {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff, 0 0 100px #fff;
+    }
+  }
+  .guide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px ;
+    position: absolute;
+    right: 5rem;
+    bottom: 0rem;
+  }
+.star1{
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: blue;
+}
+  
