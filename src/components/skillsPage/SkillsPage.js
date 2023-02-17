@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState, useRef } from "react";
 import astronaute from "../../assets/svg/astro.png";
 import "./skillsPage.css";
 import SkillsSphere from "./SkillsSphere";
@@ -14,6 +14,10 @@ import bootstrapIcon from "../../assets/skillsIcons/bootstrap.png";
 import sassIcon from "../../assets/skillsIcons/sass.png";
 
 export default function InfoPage() {
+  const [animation, setAnimation] = useState(false);
+  const [starLight, setStarLight] = useState(null);
+  const [filter, setFilter] = useState(null);
+  const componentRef = useRef(null);
   const skills = [
     { skill: "HTML", icon: htmlIcon },
     { skill: "CSS", icon: cssIcon },
@@ -29,9 +33,37 @@ export default function InfoPage() {
     { skill: "JDX", icon: tsIcon },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const componentPosition = componentRef.current.getBoundingClientRect();
+
+      // On vérifie si le composant est visible dans la fenêtre
+      if (componentPosition.top <= window.innerHeight * 0.2) {
+        setAnimation(true);
+      }
+    };
+
+    // On ajoute un listener pour détecter les changements de scroll
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      // On enlève le listener quand le composant est démonté
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  useEffect(() => {
+    if (animation) {
+      setTimeout(() => {
+        setStarLight("starLight");
+      }, 2000);
+      setTimeout(() => {
+        setFilter("filterGone");
+      }, 3000);
+    }
+  }, [animation]);
   return (
     <>
-      <div className="infoPageContainer">
+      <div className="infoPageContainer" ref={componentRef}>
         <img className="astronaute" src={astronaute} alt="astronaute" />
 
         <div className="skillsContainer">
@@ -45,6 +77,23 @@ export default function InfoPage() {
           })}
         </div>
         <SkillsSphere />
+        <div className={`filter ${filter}`}></div>
+        <div className="guide2">
+          <div style={{ height: "50vh" }}>
+            <div
+              className="neon-line3"
+              style={{ display: animation ? "block" : "none" }}
+            ></div>
+          </div>
+
+          <div className={`star2 ${starLight}`}></div>
+          <div style={{ height: "50vh" }}>
+            <div
+              className="neon-line4"
+              style={{ display: animation ? "block" : "none" }}
+            ></div>
+          </div>
+        </div>
       </div>
     </>
   );

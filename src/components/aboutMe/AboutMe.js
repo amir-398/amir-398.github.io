@@ -27,13 +27,15 @@ export default function AboutMe({ id }) {
     };
   }, []);
   useEffect(() => {
-    setTimeout(() => {
-      setStarLight("starLight");
-    }, 2000);
-    setTimeout(() => {
-      setFilter("filterGone");
-    }, 3000);
-  }, []);
+    if (animation) {
+      setTimeout(() => {
+        setStarLight("starLight");
+      }, 2000);
+      setTimeout(() => {
+        setFilter("filterGone");
+      }, 3000);
+    }
+  }, [animation]);
   return (
     <div id={id} className="container" ref={componentRef}>
       <div className="textsContainer">
@@ -72,12 +74,18 @@ export default function AboutMe({ id }) {
       </div>
       <div className="guide2">
         <div style={{ height: "50vh" }}>
-          <div className="neon-line3"></div>
+          <div
+            className="neon-line3"
+            style={{ display: animation ? "block" : "none" }}
+          ></div>
         </div>
 
         <div className={`star2 ${starLight}`}></div>
         <div style={{ height: "50vh" }}>
-          <div className="neon-line4"></div>
+          <div
+            className="neon-line4"
+            style={{ display: animation ? "block" : "none" }}
+          ></div>
         </div>
       </div>
     </div>
