@@ -1,0 +1,7 @@
+$sm-screen  : 768px;
+$md-screen  : 1024px;
+$lg-screen  : 1440px;
+$sm-media : "screen and (max-width : #{$sm-screen})";
+$md-media : "screen and (max-width : #{$md-screen})";
+$lg-media : "screen and (max-width : #{$lg-screen})";
+

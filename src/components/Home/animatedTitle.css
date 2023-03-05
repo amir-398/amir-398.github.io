@@ -3,9 +3,7 @@
     text-align: center;
 }
 .text-animation span {
-    
 align-items: center;
-    letter-spacing: 5px;
     padding: 2px;
     width: 60px;
     height: 80px;
@@ -20,4 +18,18 @@ align-items: center;
 }
 .text-animation span.box{
     border: 1px solid #B740A7;
+}
+@media screen and (max-width: 1024px){
+    .text-animation span{
+        font-size: 50px;
+    }
+} 
+@media screen and (max-width: 756px){
+    .text-animation {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+.text-animation span{
+    font-size: 35px;
+}
 }

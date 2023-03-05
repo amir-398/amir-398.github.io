@@ -10,11 +10,24 @@ import Home from "../Home/Home";
 import NeonLine from "../neonLine/NeonLine";
 import InfoPage from "../skillsPage/SkillsPage";
 import { Link } from "react-scroll";
+import Navbar from "../navbar/Navbar";
 export const ShowInfoPageContext = React.createContext();
 export default function Index() {
-  const [showInfoPage, setShowInfoPage] = useState(false);
+  const [homeIsActive, setHomeIsActive] = useState(false);
+  const [aboutIsActive, setAboutIsActive] = useState(false);
+  const [skillsIsActive, setSkillsIsActive] = useState(false);
+  useEffect(() => {
+    if (aboutIsActive) {
+      setHomeIsActive(false);
+      setSkillsIsActive(false);
+    }
+    if (skillsIsActive) {
+      setAboutIsActive(false);
+      setHomeIsActive(false);
+    }
+  }, [aboutIsActive, skillsIsActive]);
 
-  const scroll = (btn) => {
+  const scrollToAbout = (btn) => {
     return (
       <Link
         to="section1"
@@ -29,9 +42,15 @@ export default function Index() {
   };
   return (
     <div>
-      <Home scroll={scroll} />
-      <AboutMe id="section1" />
-      <InfoPage />
+      <Navbar
+        scrollToAbout={scrollToAbout}
+        homeIsActive={homeIsActive}
+        aboutIsActive={aboutIsActive}
+        skillsIsActive={skillsIsActive}
+      />
+      {/* <Home scrollToAbout={scrollToAbout} setHomeIsActive={setHomeIsActive} /> */}
+      <AboutMe id="section1" setAboutIsActive={setAboutIsActive} />
+      {/* <InfoPage setSkillsIsActive={setSkillsIsActive} /> */}
     </div>
   );
 }

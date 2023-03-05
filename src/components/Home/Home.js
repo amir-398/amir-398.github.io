@@ -19,7 +19,7 @@ import {
 } from "react-scroll";
 import AnimatedTitle from "./AnimatedTitle";
 
-export default function Home({ showInfoPage, setShowInfoPage, scroll }) {
+export default function Home({ showInfoPage, setShowInfoPage, scrollToAbout }) {
   const [rocketLaunch, SetrocketLaunch] = useState(false);
   const handleClick = () => {
     setShowInfoPage(true);
@@ -32,15 +32,18 @@ export default function Home({ showInfoPage, setShowInfoPage, scroll }) {
   return (
     <div>
       <div className="homeContainer">
-        <h3>Resume</h3>
+        <header></header>
+
         <img className="rock1" src={rock} alt="the moon" />
         <img className="littleRocks" src={littleRocks} alt="the moon" />
         <img className="rockDown" src={rockDown} alt="the moon" />
         <img className="earth" src={earth} alt="the earth" />
-        <AnimatedTitle />
-        <h2> LET'S EXPLORE MY UNIVERSE TOGETHER</h2>
+        <div className="h-textContainer">
+          <AnimatedTitle />
+          <h2> LET'S EXPLORE MY UNIVERSE TOGETHER</h2>
 
-        {scroll(<button className="button">START MISSION</button>)}
+          {scrollToAbout(<button className="button">START MISSION</button>)}
+        </div>
 
         <img className="rock" src={rock} alt="the moon" />
         <div className={rocketLaunch ? "rocketContainer" : ""}></div>
@@ -49,12 +52,11 @@ export default function Home({ showInfoPage, setShowInfoPage, scroll }) {
           src={rocket}
           alt="rocket"
         />
-        <div>
-          <div className="guide">
-            <div className="neon-line1"></div>
-            <div className="star1"></div>
-            <div className="neon-line1"></div>
-          </div>
+
+        <div className="guide">
+          <div className="neon-line1"></div>
+          <div className="star1"></div>
+          <div className="neon-line2"></div>
         </div>
       </div>
     </div>

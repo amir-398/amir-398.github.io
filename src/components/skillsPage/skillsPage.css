@@ -1,13 +1,9 @@
 .infoPageContainer {
-    display: flex;
-    align-items: center;
     background-image: url("../../assets/svg/bck.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-   
-   
 }
 .astronaute{
     position: absolute;
@@ -75,6 +71,7 @@ margin-bottom: 10px;
     transition: 2s ease-in;
  }
  .filterGone{
+    display: none;
     background-color: transparent !important;
  }
 .star2{
@@ -90,19 +87,19 @@ margin-bottom: 10px;
     background-color: #fff;
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
 }
-.neon-line3 {
+.neon-line4{
     width: 4px;
     background-color: #fff;
-    border-radius : 20px;
+  
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
     animation: position1 2s ease-in-out forwards,neon 1s 2s ease-in-out infinite alternate ;
   }
  
-.neon-line4 {
+.neon-line5 {
   display: none;
     width: 4px;
     background-color: #fff;
-    border-radius : 20px;
+
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
     animation: position1 2s 4s ease-in-out forwards,neon 1s 2s ease-in-out infinite alternate ;
   }

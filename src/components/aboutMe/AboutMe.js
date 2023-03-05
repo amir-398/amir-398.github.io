@@ -2,8 +2,8 @@ import React, { useRef, useEffect, useState } from "react";
 
 import "./aboutMe.css";
 import Moon from "./Moon";
-
-export default function AboutMe({ id }) {
+import { Button } from "flowbite-react";
+export default function AboutMe({ id, setAboutIsActive }) {
   const [animation, setAnimation] = useState(false);
   const [starLight, setStarLight] = useState(null);
   const [filter, setFilter] = useState(null);
@@ -15,6 +15,7 @@ export default function AboutMe({ id }) {
       // On vérifie si le composant est visible dans la fenêtre
       if (componentPosition.top <= window.innerHeight * 0.2) {
         setAnimation(true);
+        setAboutIsActive(true);
       }
     };
 
@@ -37,7 +38,7 @@ export default function AboutMe({ id }) {
     }
   }, [animation]);
   return (
-    <div id={id} className="container" ref={componentRef}>
+    <div id={id} className="aboutMecontainer" ref={componentRef}>
       <div className="textsContainer">
         <div className="textContainer">
           <p>
@@ -68,10 +69,10 @@ export default function AboutMe({ id }) {
           </p>
         </div>
       </div>
-      <div className={`filter ${filter}`}></div>
-      <div className="moon">
+      {/* <div className={`filter ${filter}`}></div> */}
+      {/* <div className="moon">
         <Moon />
-      </div>
+      </div> */}
       <div className="guide2">
         <div style={{ height: "50vh" }}>
           <div

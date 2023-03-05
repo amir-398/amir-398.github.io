@@ -1,106 +1,152 @@
-.container {
-  
-     background-image: url("../../assets/svg/bck.png");
-     background-size: cover;
-     height: 100vh;
-     width: 100%;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-around;
-     align-items: center;
-     
- }
- 
- .textsContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-left : 10rem;
- }
- .textContainer{
-    font-family: 'Courier New', Courier, monospace;
-    width: 90%;
-    text-align: center;
-    color: white;
-    font-weight: 600;
-    font-size: 20px;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 20px;
- }
-.moon{
-    margin-right: -100px;
+.aboutMecontainer {
+  background-image: url("../../assets/svg/bck.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-.moonCanvas >canvas:first-child{
-    display: none !important;
-}
-.show {
-    color: red;
-}
-  .guide2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 200px;
-    gap:10px ;
-    margin-right: 5rem;
-  }
-  .filter{
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    transition: 2s ease-in;
- }
- .filterGone{
-    background-color: transparent !important;
- }
-.star2{
-  
-    width: 20px;
-    height: 20px;
-    transform: rotate(45deg);
-    background-color: transparent;
-    transition: ease-in 2s;
-}
-.starLight{
 
-    background-color: #fff;
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+.textsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin-left: 10rem;
 }
+
+.textContainer {
+  font-family: "Courier New", Courier, monospace;
+  width: 90%;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.moon {
+  margin-right: -100px;
+}
+
+.moonCanvas > canvas:first-child {
+  display: none !important;
+}
+
+.show {
+  color: red;
+}
+
+.guide2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 200px;
+  gap: 10px;
+  margin-right: 5rem;
+}
+
+.filter {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: 2s ease-in;
+}
+
+.filterGone {
+  background-color: transparent !important;
+}
+
+.star2 {
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: transparent;
+  transition: ease-in 2s;
+}
+
+.starLight {
+  background-color: #fff;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+}
+
 .neon-line3 {
-    width: 4px;
-    background-color: #fff;
-    border-radius : 20px;
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
-    animation: position1 2s ease-in-out forwards,neon 1s 2s ease-in-out infinite alternate ;
-  }
- 
+  width: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+  animation: position1 2s ease-in-out forwards, neon 1s 2s ease-in-out infinite alternate;
+}
+
 .neon-line4 {
   display: none;
-    width: 4px;
-    background-color: #fff;
-    border-radius : 20px;
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
-    animation: position1 2s 4s ease-in-out forwards,neon 1s 2s ease-in-out infinite alternate ;
-  }
-  @keyframes position1 {
-    from {
-    height: 0vh;
-    }
-    to {
-     height: 47vh;
-    }
+  width: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+  animation: position1 2s 4s ease-in-out forwards, neon 1s 2s ease-in-out infinite alternate;
 }
-  @keyframes neon {
-    from {
-      opacity: 0.4;
-    }
-    to {
-      opacity: 1;
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff, 0 0 100px #fff;
-    }
+
+@keyframes position1 {
+  from {
+    height: 0vh;
   }
-  
+  to {
+    height: 47vh;
+  }
+}
+@keyframes neon {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff, 0 0 100px #fff;
+  }
+}
+@media screen and (max-width : 768px) {
+  .aboutMecontainer {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  .textsContainer {
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .textContainer {
+    font-size: 12px;
+  }
+  .moon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+  .guide2 {
+    position: absolute;
+    width: fit-content;
+    right: 0;
+  }
+  .star2 {
+    width: 10px;
+    height: 10px;
+  }
+  .neon-line3, .neon-line4 {
+    width: 3px;
+  }
+}
+
+/*# sourceMappingURL=aboutMe.css.map */

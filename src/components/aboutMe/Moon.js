@@ -4,6 +4,19 @@ import * as THREE from "three";
 
 class Moon extends Component {
   componentDidMount() {
+    let moonWidth = 12;
+    window.addEventListener("resize", () => {
+      const screenWidth = window.innerWidth;
+      console.log(screenWidth);
+      if (screenWidth <= 1224) {
+        moonWidth = 8;
+      } else {
+        moonWidth = 12;
+      }
+      this.mesh.geometry = new THREE.SphereGeometry(moonWidth, 32, 32);
+      this.mesh.geometry.radius = moonWidth;
+    });
+
     // Créer un renderer
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     this.renderer.setSize(1000, 500);
@@ -23,7 +36,7 @@ class Moon extends Component {
     this.camera.position.z = 20;
 
     // Créer une sphère
-    const geometry = new THREE.SphereGeometry(12, 32, 32);
+    const geometry = new THREE.SphereGeometry(moonWidth, 32, 32);
     const texture = new THREE.TextureLoader().load(moonTexture);
     const material = new THREE.MeshBasicMaterial({ map: texture });
     this.mesh = new THREE.Mesh(geometry, material);

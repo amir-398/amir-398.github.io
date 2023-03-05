@@ -13,7 +13,7 @@ import gitIcon from "../../assets/skillsIcons/git.png";
 import bootstrapIcon from "../../assets/skillsIcons/bootstrap.png";
 import sassIcon from "../../assets/skillsIcons/sass.png";
 
-export default function InfoPage() {
+export default function InfoPage({ setSkillsIsActive }) {
   const [animation, setAnimation] = useState(false);
   const [starLight, setStarLight] = useState(null);
   const [filter, setFilter] = useState(null);
@@ -40,6 +40,7 @@ export default function InfoPage() {
       // On vérifie si le composant est visible dans la fenêtre
       if (componentPosition.top <= window.innerHeight * 0.2) {
         setAnimation(true);
+        setSkillsIsActive(true);
       }
     };
 
@@ -81,7 +82,7 @@ export default function InfoPage() {
         <div className="guide2">
           <div style={{ height: "50vh" }}>
             <div
-              className="neon-line3"
+              className="neon-line4"
               style={{ display: animation ? "block" : "none" }}
             ></div>
           </div>
@@ -89,7 +90,7 @@ export default function InfoPage() {
           <div className={`star2 ${starLight}`}></div>
           <div style={{ height: "50vh" }}>
             <div
-              className="neon-line4"
+              className="neon-line5"
               style={{ display: animation ? "block" : "none" }}
             ></div>
           </div>
