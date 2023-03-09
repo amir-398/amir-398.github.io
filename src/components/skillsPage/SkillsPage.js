@@ -13,7 +13,7 @@ import gitIcon from "../../assets/skillsIcons/git.png";
 import bootstrapIcon from "../../assets/skillsIcons/bootstrap.png";
 import sassIcon from "../../assets/skillsIcons/sass.png";
 
-export default function InfoPage({ setSkillsIsActive }) {
+export default function InfoPage() {
   const [animation, setAnimation] = useState(false);
   const [starLight, setStarLight] = useState(null);
   const [filter, setFilter] = useState(null);
@@ -35,20 +35,18 @@ export default function InfoPage({ setSkillsIsActive }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const componentPosition = componentRef.current.getBoundingClientRect();
+      const componentPosition = componentRef.current.offsetTop;
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY + windowHeight;
 
-      // On vérifie si le composant est visible dans la fenêtre
-      if (componentPosition.top <= window.innerHeight * 0.2) {
+      if (scrollPosition > componentPosition) {
         setAnimation(true);
-        setSkillsIsActive(true);
       }
     };
 
-    // On ajoute un listener pour détecter les changements de scroll
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      // On enlève le listener quand le composant est démonté
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -64,7 +62,7 @@ export default function InfoPage({ setSkillsIsActive }) {
   }, [animation]);
   return (
     <>
-      <div className="infoPageContainer" ref={componentRef}>
+      <div id="section3" className="infoPageContainer" ref={componentRef}>
         <img className="astronaute" src={astronaute} alt="astronaute" />
 
         <div className="skillsContainer">
@@ -78,19 +76,20 @@ export default function InfoPage({ setSkillsIsActive }) {
           })}
         </div>
         <SkillsSphere />
-        <div className={`filter ${filter}`}></div>
-        <div className="guide2">
-          <div style={{ height: "50vh" }}>
+
+        <div className={`overlay ${filter}`}></div>
+        <div className="guide">
+          <div style={{ height: "50%" }}>
             <div
-              className="neon-line4"
+              className="neon-line5"
               style={{ display: animation ? "block" : "none" }}
             ></div>
           </div>
 
           <div className={`star2 ${starLight}`}></div>
-          <div style={{ height: "50vh" }}>
+          <div style={{ height: "50%" }}>
             <div
-              className="neon-line5"
+              className="neon-line6"
               style={{ display: animation ? "block" : "none" }}
             ></div>
           </div>

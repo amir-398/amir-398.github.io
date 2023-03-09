@@ -17,6 +17,7 @@
     "react-scroll": "^1.8.9",
     "react-tagcloud": "^2.3.1",
     "react-three-fiber": "^6.0.13",
+    "react-ui-scrollspy": "^2.3.0",
     "tag-canvas": "^0.0.5",
     "TagCloud": "^2.3.2",
     "three": "^0.149.0",
@@ -26,7 +27,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass:watch": "npm run home & npm run about & npm run skills & npm run navBar",
+    "home": "sass ./src/components/Home/home.scss ./src/components/Home/home.css --watch",
+    "about": "sass --watch ./src/components/aboutMe/aboutMe.scss ./src/components/aboutMe/aboutMe.css",
+    "skills": "sass --watch ./src/components/skillsPage/skillsPage.scss ./src/components/skillsPage/skillsPage.css",
+    "navBar": "sass --watch ./src/components/navBar/navBar.scss ./src/components/navBar/navBar.css"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +54,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
   }

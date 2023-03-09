@@ -4,24 +4,13 @@
 
 .navbar {
   position: fixed;
-  width: 100%;
+  width: 60%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 10px 0;
   background-color: transparent;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  padding: 1rem;
-  animation: 1s ease-in-out forwards navbar-down;
-}
-@keyframes navbar-down {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
+  z-index: 50;
 }
 .navbar ul {
   display: flex;
@@ -32,48 +21,22 @@
 }
 .navbar li {
   color: white;
-  position: relative;
   list-style-type: none;
   cursor: pointer;
-}
-.navbar li::after {
-  content: "";
-  width: 0%;
-  height: 3px;
-  background-color: #B740A7;
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  border-radius: 10px;
-  transition: all 500ms ease-out;
 }
 .navbar li:hover {
   transform: translateY(-5px);
   transition: 0.3s;
 }
-.navbar li:hover::after {
-  width: 100%;
-  left: 0%;
-}
-.navbar li h3 {
+.navbar h3 {
   color: white;
   font-size: 25px;
 }
 
-.navbar-hidden {
-  animation: 1s ease-in-out forwards navbar-up;
-}
-@keyframes navbar-up {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100%);
-  }
-}
-
-.active-scroll-spy {
-  border-bottom: 3px solid #B740A7;
+.navbar li.active {
+  background-color: #B740A7;
+  padding: 10px;
+  border-radius: 30px;
 }
 
 @media screen and (max-width : 768px) {

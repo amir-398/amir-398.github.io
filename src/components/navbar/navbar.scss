@@ -11,8 +11,19 @@
     align-items: center;
     padding: 10px 0;
     background-color: transparent;
-    z-index: 50;
-    
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+   animation: 1s ease-in-out forwards navbar-down;
+   @keyframes navbar-down {
+    from {
+        transform: translateY(-100%);
+
+    }
+    to {
+        transform: translateY(0);
+    }
+   }
     ul{
         display: flex;
         flex-direction: row;
@@ -22,26 +33,49 @@
     }
     li {
         color: white;
+        position: relative;
         list-style-type: none;
         cursor: pointer;
+        &::after {
+            content : "";
+            width : 0%;
+            height : 3px;
+            background-color : #{$primary_text_color};
+            position: absolute;
+           bottom: 0%; left: 50%;
+            border-radius : 10px;
+            transition: all 500ms ease-out;
+        }
        &:hover {
         transform:translateY(-5px);
-        transition: .3s;
-       }
-      
-       
+        transition: .3s;  
+        &::after {
+            width : 100%;
+            left: 0%;
+        }
     }
     h3{
         color: white;
         font-size: 25px;
     }
 }
-.navbar li.active{
-    background-color:  #{$primary_text_color};
-    padding: 10px;
-    border-radius: 30px;
-
 }
+.navbar-hidden {
+    animation: 1s ease-in-out forwards navbar-up;
+    @keyframes navbar-up {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-100%);
+        }
+        }
+}
+
+.active-scroll-spy {
+    border-bottom: 3px solid #{$primary_text_color};
+   
+  }
 @media #{$sm-media} {
    .hambuger-menu{
      display: block;
@@ -57,9 +91,13 @@
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         height: 100vh;
+    
         z-index: 500;
         transform: translateX(-100%);
         transition: all 0.5s ease-in-out;
+        display: flex;
+       align-items: center;
+        justify-content: center;
         ul {
             display: flex;
             flex-direction: column;

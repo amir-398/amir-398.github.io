@@ -7,7 +7,6 @@ class Moon extends Component {
     let moonWidth = 12;
     window.addEventListener("resize", () => {
       const screenWidth = window.innerWidth;
-      console.log(screenWidth);
       if (screenWidth <= 1224) {
         moonWidth = 8;
       } else {

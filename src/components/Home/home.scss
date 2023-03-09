@@ -5,6 +5,7 @@
     min-height: 100vh;
     max-height: 80vh;
     min-width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -43,6 +44,8 @@
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
+        position: relative;
+        z-index: 100;
       &:hover {
         box-shadow: rgba(87, 15, 83, 0.35) 0 -25px 18px -14px inset,rgba(96, 9, 83, 0.25) 0 1px 2px,rgba(106, 8, 85, 0.25) 0 2px 4px,rgba(87, 8, 80, 0.25) 0 4px 8px,rgba(72, 4, 68, 0.25) 0 8px 16px,rgba(85, 10, 82, 0.25) 0 16px 32px;
         transform: scale(1.05) rotate(-1deg);
@@ -52,8 +55,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 50rem;
-    height: 40rem;
+    width: 30rem;
+    height: 30rem;
     z-index: 51;
 }
 
@@ -160,7 +163,7 @@
  }
  .guide{
     position: absolute;
-    right: 5em;
+    right: 3em;
     display: flex;
     flex-direction: column;
     align-items:center ;
@@ -247,15 +250,19 @@
         padding: 10px 30px;
     }
     .guide {
+        height: 100%;
         right: 1em;
     }
-    
-    .rocket{
-        display: none;
+     .rocket{
+        width: 3rem;
+        height: 5rem;
+        top: 5rem;
+        left: 3rem;
 
     }
-    .littleRocks {
-        display: none;
+    .littleRocks{
+        bottom: 1rem;
+        right: auto;
     }
     .star1 {
         width: 10px;

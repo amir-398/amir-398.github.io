@@ -1,10 +1,18 @@
 .text-animation{
-    font-family: "ROBOTO Mono", "monospace";
+    font-weight: 700;
     text-align: center;
+    margin-bottom: 20px;
+    height: 80px;
+  width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .text-animation span {
-align-items: center;
-    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
     width: 60px;
     height: 80px;
     font-size: 70px;

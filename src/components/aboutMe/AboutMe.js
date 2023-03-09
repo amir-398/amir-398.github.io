@@ -3,27 +3,25 @@ import React, { useRef, useEffect, useState } from "react";
 import "./aboutMe.css";
 import Moon from "./Moon";
 import { Button } from "flowbite-react";
-export default function AboutMe({ id, setAboutIsActive }) {
+export default function AboutMe({ scrollToNextSction }) {
   const [animation, setAnimation] = useState(false);
   const [starLight, setStarLight] = useState(null);
   const [filter, setFilter] = useState(null);
   const componentRef = useRef(null);
   useEffect(() => {
     const handleScroll = () => {
-      const componentPosition = componentRef.current.getBoundingClientRect();
+      const componentPosition = componentRef.current.offsetTop;
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY + windowHeight;
 
-      // On vérifie si le composant est visible dans la fenêtre
-      if (componentPosition.top <= window.innerHeight * 0.2) {
+      if (scrollPosition > componentPosition) {
         setAnimation(true);
-        setAboutIsActive(true);
       }
     };
 
-    // On ajoute un listener pour détecter les changements de scroll
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      // On enlève le listener quand le composant est démonté
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -38,7 +36,10 @@ export default function AboutMe({ id, setAboutIsActive }) {
     }
   }, [animation]);
   return (
-    <div id={id} className="aboutMecontainer" ref={componentRef}>
+    <div id="section2" className="aboutMecontainer" ref={componentRef}>
+      {/* <div className="moon">
+        <Moon />
+      </div> */}
       <div className="textsContainer">
         <div className="textContainer">
           <p>
@@ -69,12 +70,14 @@ export default function AboutMe({ id, setAboutIsActive }) {
           </p>
         </div>
       </div>
-      {/* <div className={`filter ${filter}`}></div> */}
-      {/* <div className="moon">
-        <Moon />
-      </div> */}
-      <div className="guide2">
-        <div style={{ height: "50vh" }}>
+      {scrollToNextSction(
+        "section2",
+        <button className="button">Next MISSION</button>
+      )}
+      <div className={`overlay ${filter}`}></div>
+
+      <div className="guide">
+        <div style={{ height: "50%" }}>
           <div
             className="neon-line3"
             style={{ display: animation ? "block" : "none" }}
@@ -82,7 +85,7 @@ export default function AboutMe({ id, setAboutIsActive }) {
         </div>
 
         <div className={`star2 ${starLight}`}></div>
-        <div style={{ height: "50vh" }}>
+        <div style={{ height: "50%" }}>
           <div
             className="neon-line4"
             style={{ display: animation ? "block" : "none" }}
