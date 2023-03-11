@@ -45,8 +45,8 @@ class SkillsSphere extends React.Component {
     return (
       <>
         <canvas
-          width="800"
-          height="800"
+          width="650"
+          height="650"
           id="myCanvas"
           style={{ marginLeft: "30px" }}
         >

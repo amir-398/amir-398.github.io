@@ -14,10 +14,11 @@
 
 .astronaute {
   position: absolute;
-  right: 13rem;
-  width: 28rem;
-  height: 28rem;
+  right: 15rem;
+  width: 15rem;
+  height: 15rem;
   animation: 5s infinite forwards astro;
+  z-index: 0;
 }
 
 @keyframes astro {
@@ -48,7 +49,7 @@
   justify-content: center;
   position: relative;
   width: 22%;
-  height: 12rem;
+  height: 8rem;
   text-align: center;
   background: linear-gradient(109.6deg, rgb(48, 207, 208) 11.2%, rgb(51, 8, 103) 92.5%);
   border-radius: 5px;
@@ -58,15 +59,15 @@
   position: absolute;
   top: 0;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .skillsCards > img {
   margin: 0 auto;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .overlay {
