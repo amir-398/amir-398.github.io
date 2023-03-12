@@ -230,20 +230,17 @@
   }
   .button {
     font-size: 20px;
-    padding: 15px 50px;
+    padding: 8px 50px;
   }
 }
 @media screen and (max-width : 768px) {
   .h-textContainer > h2 {
-    font-size: 17px;
+    font-size: 25px;
     margin: 0;
   }
   .earth {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 20rem;
-    width: 25rem;
+    height: 15rem;
+    width: 15rem;
   }
   .rock {
     display: none;
@@ -252,6 +249,7 @@
     display: none;
   }
   .button {
+    margin-top: 2rem;
     font-size: 16px;
     padding: 10px 30px;
   }
@@ -260,13 +258,13 @@
     right: 1em;
   }
   .rocket {
-    width: 3rem;
+    width: 2.5rem;
     height: 5rem;
     top: 5rem;
     left: 3rem;
   }
   .littleRocks {
-    bottom: 1rem;
+    bottom: 5rem;
     right: auto;
   }
   .star1 {

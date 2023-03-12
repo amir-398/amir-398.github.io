@@ -117,6 +117,34 @@ margin-bottom: 10px;
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff, 0 0 100px #fff;
     }
   }
+  
+//responsive
+@media #{$md-media}{
+#myCanvas {
+    width: 500px;
+    height: 500px;
+}
+.astronaute {
+    width: 12rem;
+    height: 12rem;
+    margin-right: -3rem;
+}
+.skillsContainer {
+    height: 60%;
+}
+.skillsCards {
+    height: 6rem;
+    p {
+        margin-top: 2px;
+        font-size: 13px;
+    }
+    img{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+}
+  
   @media #{$sm-media}{
     .infoPageContainer{
         height: 100%;

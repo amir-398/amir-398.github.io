@@ -101,6 +101,11 @@
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff, 0 0 100px #fff;
   }
 }
+@media screen and (max-width : 1024px) {
+  .textsContainer p {
+    font-size: 15px;
+  }
+}
 @media screen and (max-width : 768px) {
   .aboutMecontainer {
     position: relative;

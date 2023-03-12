@@ -32,10 +32,10 @@
         font-size: 50px;
     }
 } 
-@media screen and (max-width: 756px){
+@media screen and (max-width: 768px){
     .text-animation {
         margin: 0;
-        margin-bottom: 10px;
+        margin-bottom: -15px;
     }
 .text-animation span{
     font-size: 35px;

@@ -87,9 +87,9 @@
     z-index: 600;
   }
   .navbar {
+    position: absolute;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     height: 100vh;
     z-index: 500;
     transform: translateX(-100%);
@@ -97,6 +97,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: none;
   }
   .navbar ul {
     display: flex;
@@ -107,7 +108,7 @@
     top: 0px;
     right: 20px;
   }
-  .navbar.navbar_active {
+  .navbar_active {
     transform: translateX(0);
   }
 }

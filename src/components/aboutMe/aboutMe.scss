@@ -96,7 +96,16 @@
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff, 0 0 100px #fff;
       }
     }
+//responsive md screen 1024
+@media #{$md-media} {
+  .textsContainer{
+    p {
+      font-size: 15px;
+    }
     
+  }
+}
+//responsive small screens 768
 @media #{$sm-media}{
     .aboutMecontainer {
         position: relative;
