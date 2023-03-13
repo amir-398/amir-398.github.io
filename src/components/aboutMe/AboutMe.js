@@ -72,7 +72,7 @@ export default function AboutMe({ scrollToNextSction }) {
       </div>
       {scrollToNextSction(
         "section3",
-        <button className="button">Next MISSION</button>
+        <button className="button btn-2">Next MISSION</button>
       )}
       <div className={`overlay ${filter}`}></div>
 

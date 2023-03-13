@@ -17,7 +17,8 @@ export default function Index() {
   const [homeIsActive, setHomeIsActive] = useState(false);
   const [aboutIsActive, setAboutIsActive] = useState(false);
   const [skillsIsActive, setSkillsIsActive] = useState(false);
-
+  const [visible, setVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
   useEffect(() => {
     if (aboutIsActive) {
       setHomeIsActive(false);
@@ -28,25 +29,26 @@ export default function Index() {
       setHomeIsActive(false);
     }
   }, [aboutIsActive, skillsIsActive]);
-  const [visible, setVisible] = useState(true);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-  const handleScroll = () => {
-    const currentScrollPos = window.scrollY;
-    if (prevScrollPos > currentScrollPos) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-    setPrevScrollPos(currentScrollPos);
-  };
-
+  const screenWidth = window.screen.width;
+  console.log(screenWidth);
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
+    if (screenWidth > 768) {
+      const handleScroll = () => {
+        const currentScrollPos = window.scrollY;
+        if (prevScrollPos > currentScrollPos) {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
+        setPrevScrollPos(currentScrollPos);
+      };
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [screenWidth]);
 
   const scrollToNextSction = (id, btn) => {
     return (

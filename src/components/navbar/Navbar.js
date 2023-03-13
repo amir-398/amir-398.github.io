@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./navbar.css";
 import hamburger from "../../assets/menu/menu.png";
 function Navbar({
@@ -8,9 +8,15 @@ function Navbar({
   navbarIsVisible,
 }) {
   //resposive toggler
-  const activeNavbar = document.querySelector(".navbar");
+  const navbar = useRef(null);
+  const body = document.querySelector("body");
   const handleSubmit = () => {
-    activeNavbar.classList.toggle("navbar_active");
+    navbar.current.classList.toggle("navbar_active");
+    if (navbar.current.classList.contains("navbar_active")) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
+    }
   };
 
   return (
@@ -22,7 +28,10 @@ function Navbar({
           src={hamburger}
           alt="menu hamburger"
         />
-        <nav className={`navbar ${navbarIsVisible ? "" : "navbar-hidden"} `}>
+        <nav
+          ref={navbar}
+          className={`navbar ${navbarIsVisible ? "" : "navbar-hidden"} `}
+        >
           <h3>RESUME</h3>
           <ul>
             <li data-to-scrollspy-id="section1">

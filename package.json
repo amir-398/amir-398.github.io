@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass:watch": "npm run home & npm run about & npm run skills & npm run navBar",
+    "sass:watch": "npm run home  npm run about  npm run skills  npm run navBar",
     "home": "sass ./src/components/Home/home.scss ./src/components/Home/home.css --watch",
     "about": "sass --watch ./src/components/aboutMe/aboutMe.scss ./src/components/aboutMe/aboutMe.css",
     "skills": "sass --watch ./src/components/skillsPage/skillsPage.scss ./src/components/skillsPage/skillsPage.css",

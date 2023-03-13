@@ -41,3 +41,8 @@
     font-size: 35px;
 }
 }
+@media screen and (max-width: 375px){
+    .text-animation span{
+        font-size: 30px;
+    }
+}

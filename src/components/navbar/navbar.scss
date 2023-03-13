@@ -73,8 +73,7 @@
 }
 
 .active-scroll-spy {
-    border-bottom: 3px solid #{$primary_text_color};
-   
+    border-bottom: 3px solid #{$primary_text_color}
   }
 @media #{$sm-media} {
    .hambuger-menu{
@@ -111,5 +110,7 @@
     }
     .navbar_active {
         transform: translateX(0);
+        overflow: hidden;
     }
+    
 }

@@ -226,12 +226,12 @@
  }
 @media #{$sm-media}{
     .h-textContainer > h2 {
-        font-size: 25px;
+        font-size: 19px;
         margin: 0;
     }
     .earth {
-        height: 15rem;
-        width: 15rem;
+        height: 12rem;
+        width: 12rem;
        
     }
     .rock {
@@ -268,3 +268,9 @@
         width: 3px;
     }
 }   
+@media #{$xs-media}{
+    .h-textContainer>h2 {
+        font-size: 16px;
+        margin: 0;
+    }
+}

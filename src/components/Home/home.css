@@ -235,12 +235,12 @@
 }
 @media screen and (max-width : 768px) {
   .h-textContainer > h2 {
-    font-size: 25px;
+    font-size: 19px;
     margin: 0;
   }
   .earth {
-    height: 15rem;
-    width: 15rem;
+    height: 12rem;
+    width: 12rem;
   }
   .rock {
     display: none;
@@ -273,6 +273,12 @@
   }
   .neon-line1, .neon-line2 {
     width: 3px;
+  }
+}
+@media screen and (max-width : 375px) {
+  .h-textContainer > h2 {
+    font-size: 16px;
+    margin: 0;
   }
 }
 

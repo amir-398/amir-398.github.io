@@ -43,12 +43,7 @@ function SkillsSphere() {
 
   return (
     <>
-      <canvas
-        width="650"
-        height="650"
-        id="myCanvas"
-        style={{ marginLeft: "30px" }}
-      >
+      <canvas width="650" height="650" id="myCanvas">
         <p>
           Anything in here will be replaced on browsers that do not support the
           canvas element

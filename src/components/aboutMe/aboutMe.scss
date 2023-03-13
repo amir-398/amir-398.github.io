@@ -122,11 +122,14 @@
         display: flex;
         flex-direction:column-reverse;
         gap: 1rem;
-        margin-top: 5rem;
-        padding-bottom: 2rem;
+        margin-top: 3rem;
+       
     }
     .textContainer{
+      p{
         font-size: 12px;
+      }
+        
     }
     .moon{
         display: flex;
@@ -137,7 +140,10 @@
         margin-bottom: -8rem;
         
     }
-   
+   .btn-2 {
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+   }
     .star2 {
         width: 10px;
         height: 10px;
