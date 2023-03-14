@@ -12,6 +12,7 @@ import InfoPage from "../skillsPage/SkillsPage";
 import { Link } from "react-scroll";
 import Navbar from "../navbar/Navbar";
 import ScrollSpy from "react-ui-scrollspy";
+import Contact from "../contact/Contact";
 export const ShowInfoPageContext = React.createContext();
 export default function Index() {
   const [homeIsActive, setHomeIsActive] = useState(false);
@@ -84,6 +85,7 @@ export default function Index() {
           setAboutIsActive={setAboutIsActive}
         />
         <InfoPage id="section3" setSkillsIsActive={setSkillsIsActive} />
+        <Contact />
       </ScrollSpy>
     </div>
   );

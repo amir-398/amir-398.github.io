@@ -32,7 +32,8 @@
     "home": "sass ./src/components/Home/home.scss ./src/components/Home/home.css --watch",
     "about": "sass --watch ./src/components/aboutMe/aboutMe.scss ./src/components/aboutMe/aboutMe.css",
     "skills": "sass --watch ./src/components/skillsPage/skillsPage.scss ./src/components/skillsPage/skillsPage.css",
-    "navBar": "sass --watch ./src/components/navBar/navBar.scss ./src/components/navBar/navBar.css"
+    "navBar": "sass --watch ./src/components/navBar/navBar.scss ./src/components/navBar/navBar.css",
+    "contact": "sass --watch ./src/components/contact/contact.scss ./src/components/contact/contact.css"
   },
   "eslintConfig": {
     "extends": [

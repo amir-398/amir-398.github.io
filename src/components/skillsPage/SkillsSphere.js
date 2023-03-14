@@ -79,34 +79,19 @@ function SkillsSphere() {
             <a href="/">PHP</a>
           </li>
           <li>
-            <a href="/">Symphony</a>
+            <a href="/">MySQL</a>
           </li>
           <li>
             <a href="/">Firebase</a>
           </li>
           <li>
-            <a href="/">RxJS</a>
+            <a href="/">Git</a>
           </li>
           <li>
-            <a href="/">Material design</a>
-          </li>
-          <li>
-            <a href="/">Devops</a>
+            <a href="/">GitHub</a>
           </li>
           <li>
             <a href="/">NodeJS</a>
-          </li>
-          <li>
-            <a href="/">Mongo DB</a>
-          </li>
-          <li>
-            <a href="/">Cloud services</a>
-          </li>
-          <li>
-            <a href="/">Data Visualization</a>
-          </li>
-          <li>
-            <a href="/">Progressive Web Apps</a>
           </li>
         </ul>
       </div>

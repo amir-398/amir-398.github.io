@@ -12,6 +12,8 @@ import symfonyIcon from "../../assets/skillsIcons/symfony.png";
 import gitIcon from "../../assets/skillsIcons/git.png";
 import bootstrapIcon from "../../assets/skillsIcons/bootstrap.png";
 import sassIcon from "../../assets/skillsIcons/sass.png";
+import mysqlIcon from "../../assets/skillsIcons/mysql.png";
+import tailwindIcon from "../../assets/skillsIcons/tailwind.png";
 
 export default function InfoPage() {
   const [animation, setAnimation] = useState(false);
@@ -22,15 +24,15 @@ export default function InfoPage() {
     { skill: "HTML", icon: htmlIcon },
     { skill: "CSS", icon: cssIcon },
     { skill: "BOOTSTRAP", icon: bootstrapIcon },
+    { skill: "Tailwind", icon: tailwindIcon },
     { skill: "SASS", icon: sassIcon },
     { skill: "JAVASCRIPT", icon: jsIcon },
     { skill: "PHP", icon: phpIcon },
     { skill: "REACT", icon: reactIcon },
-    { skill: "REACT NATIVE", icon: tsIcon },
-    { skill: "TYPESCRIPT", icon: tsIcon },
-    { skill: "SYMPHONY", icon: symfonyIcon },
+    { skill: "REACT NATIVE", icon: reactIcon },
+    { skill: "MySQL", icon: mysqlIcon },
     { skill: "GIT", icon: gitIcon },
-    { skill: "JDX", icon: tsIcon },
+    { skill: "TypeScript", icon: tsIcon },
   ];
 
   useEffect(() => {
