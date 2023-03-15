@@ -11,10 +11,110 @@
 
 .formContainer {
   width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formContainer h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  gap: 20px;
+}
+.formContainer form input, .formContainer form textarea {
+  width: 100%;
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.formContainer form input:focus, .formContainer form textarea:focus {
+  border-color: red;
+}
+.formContainer form input::placeholder, .formContainer form textarea::placeholder {
+  color: white;
+  font-weight: 500;
+}
+.formContainer form textarea {
+  height: 15rem;
+}
+.formContainer form .btn-3 {
+  width: 60%;
+  margin-top: 1rem;
 }
 
 .astroContainer {
+  display: flex;
+  position: relative;
   width: 50%;
+  height: 100%;
+  align-items: flex-end;
+}
+.astroContainer img:not(:last-child) {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  animation: 6s infinite planet;
+}
+
+.planet1 {
+  width: 2rem !important;
+  height: 2rem !important;
+  top: 50%;
+  right: 20%;
+}
+
+.planet2 {
+  height: 4rem !important;
+  bottom: 30%;
+  left: 10%;
+}
+
+.planet3 {
+  top: 10%;
+  right: 10%;
+}
+
+.planet4 {
+  bottom: 20%;
+  left: 80%;
+}
+
+.planet5 {
+  height: 10rem !important;
+  width: 10rem !important;
+  top: 10%;
+  left: 10%;
+}
+
+.planet6 {
+  width: 8rem !important;
+  height: 8rem !important;
+  top: 30%;
+  right: 30%;
+}
+
+@keyframes planet {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
 }
 
 /*# sourceMappingURL=contact.css.map */
