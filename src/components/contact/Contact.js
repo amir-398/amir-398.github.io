@@ -29,7 +29,7 @@ function Contact() {
   };
   console.log(info);
   return (
-    <div className="contactContainer">
+    <div id="contact" className="contactContainer">
       <div className="astroContainer">
         <img className="planet1" src={planet01} alt="" />
         <img className="planet2" src={planet02} alt="" />

@@ -7,9 +7,9 @@ import rocket from "../../assets/svg/rocket.png";
 import AnimatedTitle from "./AnimatedTitle";
 import "./home.css";
 
-export default function Home({ scrollToNextSction }) {
+export default function Home({ scrollToNextSection }) {
   return (
-    <div id="section1" className="homeContainer">
+    <div id="home" className="homeContainer">
       <img className="rock1" src={rock} alt="the moon" />
       <img className="littleRocks" src={littleRocks} alt="the moon" />
       <img className="rockDown" src={rockDown} alt="the moon" />
@@ -17,8 +17,8 @@ export default function Home({ scrollToNextSction }) {
       <div className="h-textContainer">
         <AnimatedTitle />
         <h2> LET'S EXPLORE MY UNIVERSE TOGETHER</h2>
-        {scrollToNextSction(
-          "section2",
+        {scrollToNextSection(
+          "about",
           <button className="button">START MISSION</button>
         )}
       </div>

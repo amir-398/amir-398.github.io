@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@frank-mayer/react-tag-cloud": "^1.1.1",
+    "@rneui/themed": "^4.0.0-rc.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -12,6 +13,7 @@
     "gsap": "^3.11.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
@@ -33,7 +35,8 @@
     "about": "sass --watch ./src/components/aboutMe/aboutMe.scss ./src/components/aboutMe/aboutMe.css",
     "skills": "sass --watch ./src/components/skillsPage/skillsPage.scss ./src/components/skillsPage/skillsPage.css",
     "navBar": "sass --watch ./src/components/navBar/navBar.scss ./src/components/navBar/navBar.css",
-    "contact": "sass --watch ./src/components/contact/contact.scss ./src/components/contact/contact.css"
+    "contact": "sass --watch ./src/components/contact/contact.scss ./src/components/contact/contact.css",
+    "footer": "sass --watch ./src/components/footer/footer.scss ./src/components/footer/footer.css"
   },
   "eslintConfig": {
     "extends": [

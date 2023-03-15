@@ -13,6 +13,7 @@ import { Link } from "react-scroll";
 import Navbar from "../navbar/Navbar";
 import ScrollSpy from "react-ui-scrollspy";
 import Contact from "../contact/Contact";
+import Footer from "../footer/Footer";
 export const ShowInfoPageContext = React.createContext();
 export default function Index() {
   const [homeIsActive, setHomeIsActive] = useState(false);
@@ -20,6 +21,7 @@ export default function Index() {
   const [skillsIsActive, setSkillsIsActive] = useState(false);
   const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  console.log("prevScrollPos", prevScrollPos);
   useEffect(() => {
     if (aboutIsActive) {
       setHomeIsActive(false);
@@ -32,26 +34,24 @@ export default function Index() {
   }, [aboutIsActive, skillsIsActive]);
 
   const screenWidth = window.screen.width;
-  console.log(screenWidth);
   useEffect(() => {
     if (screenWidth > 768) {
       const handleScroll = () => {
         const currentScrollPos = window.scrollY;
-        if (prevScrollPos > currentScrollPos) {
-          setVisible(true);
-        } else {
+        if (currentScrollPos > 200) {
           setVisible(false);
+        } else {
+          setVisible(true);
         }
-        setPrevScrollPos(currentScrollPos);
       };
       window.addEventListener("scroll", handleScroll);
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
     }
-  }, [screenWidth]);
+  }, []);
 
-  const scrollToNextSction = (id, btn) => {
+  const scrollToNextSection = (id, btn) => {
     return (
       <Link
         to={id}
@@ -71,22 +71,23 @@ export default function Index() {
         aboutIsActive={aboutIsActive}
         skillsIsActive={skillsIsActive}
         navbarIsVisible={visible}
-        scrollToNextSction={scrollToNextSction}
+        scrollToNextSection={scrollToNextSection}
       />
       <ScrollSpy scrollThrottle={1000} useBoxMethod={false}>
         <Home
-          id="section1"
-          scrollToNextSction={scrollToNextSction}
+          id="home"
+          scrollToNextSection={scrollToNextSection}
           setHomeIsActive={setHomeIsActive}
         />
         <AboutMe
-          id="section2"
-          scrollToNextSction={scrollToNextSction}
+          id="about"
+          scrollToNextSection={scrollToNextSection}
           setAboutIsActive={setAboutIsActive}
         />
-        <InfoPage id="section3" setSkillsIsActive={setSkillsIsActive} />
-        <Contact />
+        <InfoPage id="skills" setSkillsIsActive={setSkillsIsActive} />
+        <Contact id="contact" />
       </ScrollSpy>
+      <Footer />
     </div>
   );
 }

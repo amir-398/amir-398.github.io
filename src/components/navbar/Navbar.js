@@ -1,12 +1,19 @@
 import React, { useRef } from "react";
 import "./navbar.css";
 import hamburger from "../../assets/menu/menu.png";
+import downloadIcon from "../../assets/svg/download.png";
+import cv from "../../assets/cv/AMIR MEBERBECHE.pdf";
 function Navbar({
-  scrollToNextSction,
+  scrollToNextSection,
   aboutIsActive,
   skillsIsActive,
   navbarIsVisible,
 }) {
+  //open cv
+  const openCv = () => {
+    window.open(cv, "_blank");
+  };
+
   //resposive toggler
   const navbar = useRef(null);
   const body = document.querySelector("body");
@@ -30,21 +37,26 @@ function Navbar({
         />
         <nav
           ref={navbar}
-          className={`navbar ${navbarIsVisible ? "" : "navbar-hidden"} `}
+          className={`navbar ${navbarIsVisible ? "" : "navbar-bck"} `}
         >
-          <h3>RESUME</h3>
+          <a onClick={openCv}>
+            <h3 className="resume">
+              {" "}
+              <img src={downloadIcon} alt="download" /> RESUME
+            </h3>
+          </a>
           <ul>
-            <li data-to-scrollspy-id="section1">
-              {scrollToNextSction("section1", "Home")}
+            <li data-to-scrollspy-id="home">
+              {scrollToNextSection("home", "Home")}
             </li>
-            <li data-to-scrollspy-id="section2">
-              {scrollToNextSction("section2", "About")}
+            <li data-to-scrollspy-id="about">
+              {scrollToNextSection("about", "About")}
             </li>
-            <li data-to-scrollspy-id="section3">
-              {scrollToNextSction("section3", "Skills")}
+            <li data-to-scrollspy-id="skills">
+              {scrollToNextSection("skills", "Skills")}
             </li>
-            <li data-to-scrollspy-id="section4">
-              {scrollToNextSction("section4", "Contact")}
+            <li data-to-scrollspy-id="contact">
+              {scrollToNextSection("contact", "Contact")}
             </li>
           </ul>
           <h3 style={{ color: "transparent", cursor: "" }}>Resume</h3>

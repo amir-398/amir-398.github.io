@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from "react";
 import "./aboutMe.css";
 import Moon from "./Moon";
 import { Button } from "flowbite-react";
-export default function AboutMe({ scrollToNextSction }) {
+export default function AboutMe({ scrollToNextSection }) {
   const [animation, setAnimation] = useState(false);
   const [starLight, setStarLight] = useState(null);
   const [filter, setFilter] = useState(null);
@@ -36,7 +36,7 @@ export default function AboutMe({ scrollToNextSction }) {
     }
   }, [animation]);
   return (
-    <div id="section2" className="aboutMecontainer" ref={componentRef}>
+    <div id="about" className="aboutMecontainer" ref={componentRef}>
       {/* <div className="moon">
         <Moon />
       </div> */}
@@ -70,8 +70,8 @@ export default function AboutMe({ scrollToNextSction }) {
           </p>
         </div>
       </div>
-      {scrollToNextSction(
-        "section3",
+      {scrollToNextSection(
+        "skills",
         <button className="button btn-2">Next MISSION</button>
       )}
       <div className={`overlay ${filter}`}></div>

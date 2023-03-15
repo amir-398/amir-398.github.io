@@ -116,5 +116,53 @@
     transform: translateY(7px);
   }
 }
+@media screen and (max-width : 1024px) {
+  .formContainer h2 {
+    font-size: 2rem;
+  }
+  .btn-3 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width : 430px) {
+  .contactContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .formContainer h2 {
+    font-size: 1.5rem;
+  }
+  .astroContainer {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .formContainer {
+    width: 100%;
+  }
+  .btn-3 {
+    font-size: 12px;
+  }
+  .planet3 {
+    top: 0;
+  }
+  .planet4 {
+    top: 5%;
+    left: 10%;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  .planet2 {
+    width: 2rem;
+    height: 2rem;
+    bottom: 10%;
+    left: 2%;
+  }
+  .planet5, .planet6, .planet1 {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=contact.css.map */

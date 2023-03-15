@@ -12,9 +12,9 @@
     padding: 10px 0;
     background-color: transparent;
     z-index: 1000;
-    backdrop-filter: blur(10px);
     padding: 1rem;
-   animation: 1s ease-in-out forwards navbar-down;
+   animation: 1s 1s ease-in-out forwards navbar-down;
+   transition: all 500ms ease-in;
    @keyframes navbar-down {
     from {
         transform: translateY(-100%);
@@ -24,6 +24,19 @@
         transform: translateY(0);
     }
    }
+.resume {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    img {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+    }
+}
     ul{
         display: flex;
         flex-direction: row;
@@ -54,22 +67,11 @@
             left: 0%;
         }
     }
-    h3{
-        color: white;
-        font-size: 25px;
-    }
+    
 }
 }
-.navbar-hidden {
-    animation: 1s ease-in-out forwards navbar-up;
-    @keyframes navbar-up {
-        from {
-            transform: translateY(0);
-        }
-        to {
-            transform: translateY(-100%);
-        }
-        }
+.navbar-bck {
+    backdrop-filter: blur(10px);
 }
 
 .active-scroll-spy {

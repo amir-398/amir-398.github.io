@@ -11,9 +11,9 @@
   padding: 10px 0;
   background-color: transparent;
   z-index: 1000;
-  backdrop-filter: blur(10px);
   padding: 1rem;
-  animation: 1s ease-in-out forwards navbar-down;
+  animation: 1s 1s ease-in-out forwards navbar-down;
+  transition: all 500ms ease-in;
 }
 @keyframes navbar-down {
   from {
@@ -22,6 +22,19 @@
   to {
     transform: translateY(0);
   }
+}
+.navbar .resume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+.navbar .resume img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
 }
 .navbar ul {
   display: flex;
@@ -55,21 +68,9 @@
   width: 100%;
   left: 0%;
 }
-.navbar li h3 {
-  color: white;
-  font-size: 25px;
-}
 
-.navbar-hidden {
-  animation: 1s ease-in-out forwards navbar-up;
-}
-@keyframes navbar-up {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100%);
-  }
+.navbar-bck {
+  backdrop-filter: blur(10px);
 }
 
 .active-scroll-spy {

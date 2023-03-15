@@ -64,7 +64,7 @@ export default function InfoPage() {
   }, [animation]);
   return (
     <>
-      <div id="section3" className="infoPageContainer" ref={componentRef}>
+      <div id="skills" className="infoPageContainer" ref={componentRef}>
         <img className="astronaute" src={astronaute} alt="astronaute" />
 
         <div className="skillsContainer">
