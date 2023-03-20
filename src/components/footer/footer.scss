@@ -1,7 +1,7 @@
 @import "../../cssConstants/responsive.scss";
 @import "../../cssConstants/colors.scss";
 .footerContainer {
-    background-image: linear-gradient( 110.1deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% );
+    background-color: #1f1f1f;
     width: 100%;
     height: 100%;
     display: flex;
@@ -47,7 +47,9 @@
 }
 @media #{$xs-media} {
     .footerContainer {
-        padding: 5px;
+        flex-direction: column;
+        padding: 10px;
+        gap: 2rem;
         img {
             width: 50px;
             height: 40px;
@@ -58,7 +60,7 @@
             font-size: 15px;
         }
         p {
-            font-size: 9px;
+            font-size: 12px;
             gap: 4px;
         }
     }
@@ -70,7 +72,7 @@
             }
         }
         p {
-            font-size: 5px;
+            font-size: 10px;
         }
     }
 }

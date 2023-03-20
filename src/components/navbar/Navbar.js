@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./navbar.css";
 import hamburger from "../../assets/menu/menu.png";
 import downloadIcon from "../../assets/svg/download.png";
@@ -9,16 +9,22 @@ function Navbar({
   skillsIsActive,
   navbarIsVisible,
 }) {
+  const navbar = useRef(null);
+  const body = document.querySelector("body");
+  const handleClick = () => {
+    navbar.current.classList.remove("navbar_active");
+    body.style.overflow = "auto";
+  };
   //open cv
   const openCv = () => {
     window.open(cv, "_blank");
   };
 
   //resposive toggler
-  const navbar = useRef(null);
-  const body = document.querySelector("body");
-  const handleSubmit = () => {
+
+  const handleToggle = () => {
     navbar.current.classList.toggle("navbar_active");
+
     if (navbar.current.classList.contains("navbar_active")) {
       body.style.overflow = "hidden";
     } else {
@@ -31,7 +37,7 @@ function Navbar({
       <header>
         <img
           className="hambuger-menu"
-          onClick={handleSubmit}
+          onClick={handleToggle}
           src={hamburger}
           alt="menu hamburger"
         />
@@ -47,16 +53,16 @@ function Navbar({
           </a>
           <ul>
             <li data-to-scrollspy-id="home">
-              {scrollToNextSection("home", "Home")}
+              {scrollToNextSection("home", "Home", handleClick)}
             </li>
             <li data-to-scrollspy-id="about">
-              {scrollToNextSection("about", "About")}
+              {scrollToNextSection("about", "About", handleClick)}
             </li>
             <li data-to-scrollspy-id="skills">
-              {scrollToNextSection("skills", "Skills")}
+              {scrollToNextSection("skills", "Skills", handleClick)}
             </li>
             <li data-to-scrollspy-id="contact">
-              {scrollToNextSection("contact", "Contact")}
+              {scrollToNextSection("contact", "Contact", handleClick)}
             </li>
           </ul>
           <h3 style={{ color: "transparent", cursor: "" }}>Resume</h3>

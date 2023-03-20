@@ -7,7 +7,7 @@ export default function AnimatedTitle() {
   const lettersRef = useRef([]);
 
   useEffect(() => {
-    const titleText = "HI AM AMIR";
+    const titleText = "HI I AM AMIR";
     const letterSpans = titleText.split("").map((letter, i) => {
       if (letter === " ") {
         return (

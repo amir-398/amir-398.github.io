@@ -15,7 +15,7 @@ import sassIcon from "../../assets/skillsIcons/sass.png";
 import mysqlIcon from "../../assets/skillsIcons/mysql.png";
 import tailwindIcon from "../../assets/skillsIcons/tailwind.png";
 
-export default function InfoPage() {
+export default function InfoPage({ scrollToNextSection }) {
   const [animation, setAnimation] = useState(false);
   const [starLight, setStarLight] = useState(null);
   const [filter, setFilter] = useState(null);
@@ -65,21 +65,28 @@ export default function InfoPage() {
   return (
     <>
       <div id="skills" className="infoPageContainer" ref={componentRef}>
-        <img className="astronaute" src={astronaute} alt="astronaute" />
-
-        <div className="skillsContainer">
-          {skills.map((add) => {
-            return (
-              <div className="skillsCards">
-                <p>{add.skill}</p>
-                <img src={add.icon} alt="" />
-              </div>
-            );
-          })}
-        </div>
-        <SkillsSphere />
-
         <div className={`overlay ${filter}`}></div>
+        <div className="topWrapper">
+          <img className="astronaute" src={astronaute} alt="astronaute" />
+          <div className="skillsContainer">
+            {skills.map((add) => {
+              return (
+                <div className="skillsCards">
+                  <p>{add.skill}</p>
+                  <img src={add.icon} alt="" />
+                </div>
+              );
+            })}
+          </div>
+          <SkillsSphere />
+        </div>
+        <div className="btnContainer">
+          {scrollToNextSection(
+            "contact",
+            <button className="button btn-4">NEXT MISSION</button>
+          )}
+        </div>
+
         <div className="guide">
           <div style={{ height: "50%" }}>
             <div

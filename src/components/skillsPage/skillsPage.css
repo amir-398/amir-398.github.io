@@ -4,17 +4,32 @@
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
+  position: relative;
+}
+
+.topWrapper {
+  width: 100%;
+  height: 90%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  padding: 40px;
+  padding: 20px;
   position: relative;
+}
+
+.btnContainer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
 }
 
 .astronaute {
   position: absolute;
-  right: 15rem;
+  right: 15%;
   width: 15rem;
   height: 15rem;
   animation: 5s infinite forwards astro;
@@ -49,7 +64,7 @@
   justify-content: center;
   position: relative;
   width: 22%;
-  height: 8rem;
+  height: 7.5rem;
   text-align: center;
   background: linear-gradient(109.6deg, rgb(48, 207, 208) 11.2%, rgb(51, 8, 103) 92.5%);
   border-radius: 5px;
@@ -76,6 +91,7 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   transition: 2s ease-in;
+  z-index: 5000;
 }
 
 .star2 {
@@ -130,10 +146,7 @@
   .astronaute {
     width: 12rem;
     height: 12rem;
-    right: 50%;
-  }
-  .skillsContainer {
-    height: 60%;
+    right: 16%;
   }
   .skillsCards {
     height: 6rem;
@@ -150,19 +163,13 @@
 @media screen and (max-width : 768px) {
   .infoPageContainer {
     height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
   }
-  .container {
+  .topWrapper {
     display: flex;
-    width: 100%;
-    height: 100%;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
+    padding: 0 5%;
   }
   .astronaute {
     top: 10rem;
@@ -176,13 +183,11 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
-    margin-left: 0;
     margin-bottom: 1rem;
     gap: 30px;
   }
   .skillsCards {
-    width: 35%;
+    width: 30%;
     height: 7rem;
     text-align: center;
   }
@@ -227,6 +232,16 @@
   #myCanvas {
     width: 100%;
     height: 400px;
+  }
+  .skillsCards {
+    width: 45%;
+  }
+  .topWrapper {
+    padding: 0 10%;
+  }
+  .btn-4 {
+    position: static;
+    transform: translateX(0);
   }
 }
 

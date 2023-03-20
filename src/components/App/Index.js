@@ -51,10 +51,11 @@ export default function Index() {
     }
   }, []);
 
-  const scrollToNextSection = (id, btn) => {
+  const scrollToNextSection = (id, btn, handleClick) => {
     return (
       <Link
         to={id}
+        onClick={handleClick}
         activeClass="active"
         smooth={true}
         duration={1200}
@@ -84,7 +85,11 @@ export default function Index() {
           scrollToNextSection={scrollToNextSection}
           setAboutIsActive={setAboutIsActive}
         />
-        <InfoPage id="skills" setSkillsIsActive={setSkillsIsActive} />
+        <InfoPage
+          scrollToNextSection={scrollToNextSection}
+          id="skills"
+          setSkillsIsActive={setSkillsIsActive}
+        />
         <Contact id="contact" />
       </ScrollSpy>
       <Footer />
