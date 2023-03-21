@@ -6,8 +6,7 @@ import rockDown from "../../assets/svg/rockDown.png";
 import rocket from "../../assets/svg/rocket.png";
 import AnimatedTitle from "./AnimatedTitle";
 import "./home.css";
-
-export default function Home({ scrollToNextSection }) {
+export default function Home({ scrollToNextSection, text }) {
   return (
     <div id="home" className="homeContainer">
       <img className="rock1" src={rock} alt="the moon" />
@@ -15,11 +14,13 @@ export default function Home({ scrollToNextSection }) {
       <img className="rockDown" src={rockDown} alt="the moon" />
       <img className="earth" src={earth} alt="the earth" />
       <div className="h-textContainer">
-        <AnimatedTitle />
-        <h2> LET'S EXPLORE MY UNIVERSE TOGETHER</h2>
+        <AnimatedTitle text={text} />
+        <h1>{text.title}</h1>
+        <h3>{text.sub_title}</h3>
+
         {scrollToNextSection(
           "about",
-          <button className="button">START MISSION</button>
+          <button className="button">{text.home_btn} </button>
         )}
       </div>
       <img className="rock" src={rock} alt="the moon" />

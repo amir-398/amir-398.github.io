@@ -6,40 +6,11 @@ import planet03 from "../../assets/svg/planet03.png";
 import planet04 from "../../assets/svg/planet05.png";
 import planet05 from "../../assets/svg/planet06.png";
 import planet06 from "../../assets/svg/planet07.png";
+import Overlay from "../overlayStarLight/Overlay";
 import "./contact.css";
-function Contact() {
-  const [animation, setAnimation] = useState(false);
-  const [starLight, setStarLight] = useState(null);
-  const [filter, setFilter] = useState(null);
+function Contact({ text }) {
   const componentRef = useRef(null);
-  const overlay = useRef(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      const componentPosition = componentRef.current.offsetTop;
-      const windowHeight = window.innerHeight;
-      const scrollPosition = window.scrollY + windowHeight;
 
-      if (scrollPosition > componentPosition) {
-        setAnimation(true);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  useEffect(() => {
-    if (animation) {
-      setTimeout(() => {
-        setStarLight("starLight");
-      }, 2000);
-      setTimeout(() => {
-        setFilter("filterGone");
-      }, 3000);
-    }
-  }, [animation]);
   const [info, setInfo] = useState([
     { name: "" },
     { email: "" },
@@ -58,11 +29,10 @@ function Contact() {
   const handleSumbit = (e) => {
     e.preventDefault();
   };
-  console.log(overlay);
 
   return (
     <div ref={componentRef} id="contact" className="contactContainer">
-      <div ref={overlay} className={`overlay ${filter}`}></div>
+      <Overlay componentRef={componentRef} />
       <div className="astroContainer">
         <img className="planet1" src={planet01} alt="" />
         <img className="planet2" src={planet02} alt="" />
@@ -73,13 +43,13 @@ function Contact() {
         <img src={astroContact} alt="" />
       </div>
       <div className="formContainer">
-        <h2>Get in Touch</h2>
+        <h2>{text.contact_title}</h2>
         <form action="">
           <input
             ref={name}
             onChange={handleChange}
             type="text"
-            placeholder="Name"
+            placeholder={text.input_name}
           />
           <input
             onChange={handleChange}
@@ -98,25 +68,8 @@ function Contact() {
             placeholder="Message"
           />
           <button onClick={handleSumbit} className="button btn-3">
-            send informations
+            {text.btn_contact}
           </button>
-
-          <div className="guide">
-            <div style={{ height: "50%" }}>
-              <div
-                className="neon-line5"
-                style={{ display: animation ? "block" : "none" }}
-              ></div>
-            </div>
-
-            <div className={`star2 ${starLight}`}></div>
-            <div style={{ height: "50%" }}>
-              <div
-                className="neon-line6"
-                style={{ display: animation ? "block" : "none" }}
-              ></div>
-            </div>
-          </div>
         </form>
       </div>
     </div>

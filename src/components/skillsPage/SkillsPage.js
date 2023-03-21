@@ -14,11 +14,9 @@ import bootstrapIcon from "../../assets/skillsIcons/bootstrap.png";
 import sassIcon from "../../assets/skillsIcons/sass.png";
 import mysqlIcon from "../../assets/skillsIcons/mysql.png";
 import tailwindIcon from "../../assets/skillsIcons/tailwind.png";
+import Overlay from "../overlayStarLight/Overlay";
 
-export default function InfoPage({ scrollToNextSection }) {
-  const [animation, setAnimation] = useState(false);
-  const [starLight, setStarLight] = useState(null);
-  const [filter, setFilter] = useState(null);
+export default function InfoPage({ scrollToNextSection, text }) {
   const componentRef = useRef(null);
   const skills = [
     { skill: "HTML", icon: htmlIcon },
@@ -35,37 +33,10 @@ export default function InfoPage({ scrollToNextSection }) {
     { skill: "TypeScript", icon: tsIcon },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const componentPosition = componentRef.current.offsetTop;
-      const windowHeight = window.innerHeight;
-      const scrollPosition = window.scrollY + windowHeight;
-
-      if (scrollPosition > componentPosition) {
-        setAnimation(true);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  useEffect(() => {
-    if (animation) {
-      setTimeout(() => {
-        setStarLight("starLight");
-      }, 2000);
-      setTimeout(() => {
-        setFilter("filterGone");
-      }, 3000);
-    }
-  }, [animation]);
   return (
     <>
       <div id="skills" className="infoPageContainer" ref={componentRef}>
-        <div className={`overlay ${filter}`}></div>
+        <Overlay componentRef={componentRef} />
         <div className="topWrapper">
           <img className="astronaute" src={astronaute} alt="astronaute" />
           <div className="skillsContainer">
@@ -83,25 +54,8 @@ export default function InfoPage({ scrollToNextSection }) {
         <div className="btnContainer">
           {scrollToNextSection(
             "contact",
-            <button className="button btn-4">NEXT MISSION</button>
+            <button className="button btn-4">{text.btn_next} </button>
           )}
-        </div>
-
-        <div className="guide">
-          <div style={{ height: "50%" }}>
-            <div
-              className="neon-line5"
-              style={{ display: animation ? "block" : "none" }}
-            ></div>
-          </div>
-
-          <div className={`star2 ${starLight}`}></div>
-          <div style={{ height: "50%" }}>
-            <div
-              className="neon-line6"
-              style={{ display: animation ? "block" : "none" }}
-            ></div>
-          </div>
         </div>
       </div>
     </>

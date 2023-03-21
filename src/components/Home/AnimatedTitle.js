@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import React, { useRef } from "react";
 import "./animatedTitle.css";
 
-export default function AnimatedTitle() {
+export default function AnimatedTitle({ text }) {
   const [lettersHtml, setLettersHtml] = useState("");
   const lettersRef = useRef([]);
 
@@ -90,5 +90,5 @@ export default function AnimatedTitle() {
     }
   }, [lettersHtml]);
 
-  return <h1 className="text-animation">{lettersHtml}</h1>;
+  return <h2 className="text-animation">{lettersHtml}</h2>;
 }

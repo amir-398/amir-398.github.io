@@ -1,9 +1,8 @@
 .text-animation{
     font-weight: 700;
     text-align: center;
-    margin-bottom: 20px;
-    height: 80px;
-  width: 50px;
+    height: 60px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,10 +12,10 @@
     justify-content: center;
     align-items: center;
     padding: 4px;
-    width: 60px;
-    height: 80px;
-    font-size: 55px;
-    line-height: 30px;
+    width: 30px;
+    height: 60px;
+    font-size: 35px;
+    line-height: 10px;
     color: #B740A7;
     border-radius: 2px;
 }

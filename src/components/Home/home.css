@@ -17,12 +17,18 @@
   justify-content: center;
 }
 
-.h-textContainer > h2 {
+.h-textContainer h1 {
   color: white;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 50px;
   line-height: 56px;
-  margin-bottom: 4rem;
+  margin-bottom: 1.2rem;
+}
+.h-textContainer h3 {
+  color: #B740A7;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 2rem;
 }
 
 .button {
@@ -32,13 +38,14 @@
   color: rgb(237, 237, 237);
   cursor: pointer;
   display: inline-block;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   padding: 10px 40px;
   text-align: center;
   text-decoration: none;
   transition: all 250ms;
   border: 0;
-  font-size: 25px;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 2px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -275,7 +282,7 @@
     width: 3px;
   }
 }
-@media screen and (max-width : 375px) {
+@media screen and (max-width : 430px) {
   .h-textContainer > h2 {
     font-size: 16px;
     margin: 0;

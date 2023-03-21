@@ -1,56 +1,22 @@
 import React, { useState, useRef, useEffect } from "react";
-import {
-  BrowserRouter,
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
 import AboutMe from "../aboutMe/AboutMe";
 import Home from "../Home/Home";
-import NeonLine from "../neonLine/NeonLine";
 import InfoPage from "../skillsPage/SkillsPage";
 import { Link } from "react-scroll";
 import Navbar from "../navbar/Navbar";
 import ScrollSpy from "react-ui-scrollspy";
 import Contact from "../contact/Contact";
 import Footer from "../footer/Footer";
-export const ShowInfoPageContext = React.createContext();
+import fr from "../../content/fr.json";
+import en from "../../content/en.json";
+import Loading from "../loading/Loading";
 export default function Index() {
-  const [homeIsActive, setHomeIsActive] = useState(false);
-  const [aboutIsActive, setAboutIsActive] = useState(false);
-  const [skillsIsActive, setSkillsIsActive] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  console.log("prevScrollPos", prevScrollPos);
+  const [isFrench, setIsFrench] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [text, setText] = useState("");
   useEffect(() => {
-    if (aboutIsActive) {
-      setHomeIsActive(false);
-      setSkillsIsActive(false);
-    }
-    if (skillsIsActive) {
-      setAboutIsActive(false);
-      setHomeIsActive(false);
-    }
-  }, [aboutIsActive, skillsIsActive]);
-
-  const screenWidth = window.screen.width;
-  useEffect(() => {
-    if (screenWidth > 768) {
-      const handleScroll = () => {
-        const currentScrollPos = window.scrollY;
-        if (currentScrollPos > 200) {
-          setVisible(false);
-        } else {
-          setVisible(true);
-        }
-      };
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }
-  }, []);
-
+    isFrench ? setText(fr) : setText(en);
+  }, [isFrench]);
   const scrollToNextSection = (id, btn, handleClick) => {
     return (
       <Link
@@ -65,32 +31,33 @@ export default function Index() {
       </Link>
     );
   };
+  //language Catcher
+  const language = (isFrensh, loading) => {
+    setIsFrench(isFrensh);
+    setLoading(loading);
+  };
+
   return (
     <div>
+      {loading ? <Loading /> : null}
       <Navbar
-        homeIsActive={homeIsActive}
-        aboutIsActive={aboutIsActive}
-        skillsIsActive={skillsIsActive}
-        navbarIsVisible={visible}
         scrollToNextSection={scrollToNextSection}
+        language={language}
+        text={text}
       />
       <ScrollSpy scrollThrottle={1000} useBoxMethod={false}>
-        <Home
-          id="home"
-          scrollToNextSection={scrollToNextSection}
-          setHomeIsActive={setHomeIsActive}
-        />
+        <Home id="home" scrollToNextSection={scrollToNextSection} text={text} />
         <AboutMe
           id="about"
           scrollToNextSection={scrollToNextSection}
-          setAboutIsActive={setAboutIsActive}
+          text={text}
         />
         <InfoPage
           scrollToNextSection={scrollToNextSection}
           id="skills"
-          setSkillsIsActive={setSkillsIsActive}
+          text={text}
         />
-        <Contact id="contact" />
+        <Contact id="contact" text={text} />
       </ScrollSpy>
       <Footer />
     </div>
