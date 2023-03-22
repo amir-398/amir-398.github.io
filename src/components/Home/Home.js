@@ -6,9 +6,11 @@ import rockDown from "../../assets/svg/rockDown.png";
 import rocket from "../../assets/svg/rocket.png";
 import AnimatedTitle from "./AnimatedTitle";
 import "./home.css";
+import MouseF from "../mouseFollower/MouseF";
 export default function Home({ scrollToNextSection, text }) {
   return (
     <div id="home" className="homeContainer">
+      <MouseF />
       <img className="rock1" src={rock} alt="the moon" />
       <img className="littleRocks" src={littleRocks} alt="the moon" />
       <img className="rockDown" src={rockDown} alt="the moon" />

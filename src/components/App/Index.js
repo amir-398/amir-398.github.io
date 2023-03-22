@@ -10,10 +10,25 @@ import Footer from "../footer/Footer";
 import fr from "../../content/fr.json";
 import en from "../../content/en.json";
 import Loading from "../loading/Loading";
+import { CSSTransition } from "react-transition-group";
 export default function Index() {
   const [isFrench, setIsFrench] = useState(true);
   const [loading, setLoading] = useState(false);
+  console.log(loading);
+  const [startLoading, setStartLoading] = useState(true);
   const [text, setText] = useState("");
+  const nodeRef = useRef(null);
+  const body = document.querySelector("body");
+  useEffect(() => {
+    setTimeout(() => {
+      setStartLoading(false);
+    }, 2000);
+  }, []);
+  useEffect(() => {
+    startLoading || loading
+      ? (body.style.overflow = "hidden")
+      : (body.style.overflow = "auto");
+  }, [startLoading, loading]);
   useEffect(() => {
     isFrench ? setText(fr) : setText(en);
   }, [isFrench]);
@@ -39,7 +54,17 @@ export default function Index() {
 
   return (
     <div>
-      {loading ? <Loading /> : null}
+      {startLoading ? <Loading title="" /> : null}
+      <CSSTransition
+        in={loading}
+        ref={nodeRef}
+        unmountOnExit
+        timeout={500}
+        classNames="my-node"
+      >
+        <Loading title="Changement de la langue" ref={nodeRef} />
+      </CSSTransition>
+
       <Navbar
         scrollToNextSection={scrollToNextSection}
         language={language}

@@ -10,15 +10,17 @@
     "@testing-library/user-event": "^13.5.0",
     "flowbite": "^1.6.3",
     "flowbite-react": "^0.4.1",
-    "gsap": "^3.11.4",
+    "gsap": "^3.11.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-mouse-particles": "^1.1.5",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
     "react-tagcloud": "^2.3.1",
     "react-three-fiber": "^6.0.13",
+    "react-transition-group": "^4.4.5",
     "react-ui-scrollspy": "^2.3.0",
     "tag-canvas": "^0.0.5",
     "TagCloud": "^2.3.2",
@@ -36,7 +38,8 @@
     "skills": "sass --watch ./src/components/skillsPage/skillsPage.scss ./src/components/skillsPage/skillsPage.css",
     "navBar": "sass --watch ./src/components/navBar/navBar.scss ./src/components/navBar/navBar.css",
     "contact": "sass --watch ./src/components/contact/contact.scss ./src/components/contact/contact.css",
-    "footer": "sass --watch ./src/components/footer/footer.scss ./src/components/footer/footer.css"
+    "footer": "sass --watch ./src/components/footer/footer.scss ./src/components/footer/footer.css",
+    "loading": "sass --watch ./src/components/loading/loading.scss ./src/components/loading/loading.css"
   },
   "eslintConfig": {
     "extends": [

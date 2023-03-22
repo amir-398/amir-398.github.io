@@ -7,8 +7,8 @@
     position: fixed;
     width: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     padding: 10px 0;
     background-color: transparent;
     z-index: 1000;
@@ -26,6 +26,7 @@
    }
 .resume {
     display: flex;
+    width: 25%;
     align-items: center;
     gap: 10px;
     font-size: 25px;
@@ -43,6 +44,7 @@
         align-items: center;
         font-size: 18px;
         gap: 2em;
+        margin: 0;
     }
     li {
         color: white;
