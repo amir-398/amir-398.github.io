@@ -24,18 +24,25 @@
   }
 }
 .navbar .resume {
+  width: 20%;
   display: flex;
-  width: 25%;
-  align-items: center;
-  gap: 10px;
-  font-size: 25px;
-  color: white;
+  justify-content: center;
   cursor: pointer;
+}
+.navbar .resume a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.navbar .resume h3 {
+  font-size: 22px;
+  color: white;
 }
 .navbar .resume img {
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 28px;
 }
 .navbar ul {
   display: flex;
@@ -79,7 +86,17 @@
   border-bottom: 3px solid #B740A7;
 }
 
-@media screen and (max-width : 768px) {
+@media screen and (max-width : 1024px) {
+  .navbar .resume a h3 {
+    font-size: 20px;
+    color: white;
+  }
+  .navbar .resume a img {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 920px) {
   .hambuger-menu {
     display: block;
     width: 50px;

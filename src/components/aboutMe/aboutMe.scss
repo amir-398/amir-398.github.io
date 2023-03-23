@@ -97,7 +97,7 @@
       }
     }
 //responsive md screen 1024
-@media #{$md-media} {
+@media screen and (max-width : 1400px) {
   .textsContainer{
     p {
       font-size: 15px;

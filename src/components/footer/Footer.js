@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  IoLocation,
-  IoCallSharp,
-  IoMail,
-  IoLogoLinkedin,
-} from "react-icons/io5";
+import { IoLocation, IoCallSharp, IoMail } from "react-icons/io5";
 import logo from "../../assets/svg/logo.png";
 import igIcon from "../../assets/svg/instagram.png";
 import lkIcon from "../../assets/svg/linkedin.png";

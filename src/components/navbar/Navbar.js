@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./navbar.css";
 import hamburger from "../../assets/menu/menu.png";
-import downloadIcon from "../../assets/svg/download.png";
+import { IoCloudDownloadSharp } from "react-icons/io5";
 import cv from "../../assets/cv/AMIR MEBERBECHE.pdf";
+import downloadIcon from "../../assets/svg/telecharger.png";
 function Navbar({ scrollToNextSection, navbarIsVisible, language, text }) {
   const navbar = useRef(null);
   const [isFrensh, setIsFrensh] = useState(true);
@@ -60,49 +61,56 @@ function Navbar({ scrollToNextSection, navbarIsVisible, language, text }) {
           ref={navbar}
           className={`navbar ${navbarIsVisible ? "" : "navbar-bck"} `}
         >
-          <a onClick={openCv}>
-            <h3 className="resume">{text.cv}</h3>
-          </a>
-          <ul>
-            <li data-to-scrollspy-id="home">
-              {scrollToNextSection("home", text.home, handleClick)}
-            </li>
-            <li data-to-scrollspy-id="about">
-              {scrollToNextSection("about", text.about, handleClick)}
-            </li>
-            <li data-to-scrollspy-id="skills">
-              {scrollToNextSection("skills", text.skills, handleClick)}
-            </li>
-            <li data-to-scrollspy-id="contact">
-              {scrollToNextSection("contact", text.contact, handleClick)}
-            </li>
-          </ul>
-
-          <label
-            style={{ width: "15%" }}
-            class="relative inline-flex items-center cursor-pointer"
+          <div className="resume">
+            <a onClick={openCv}>
+              <img src={downloadIcon} alt="" />
+              <h3>{text.cv}</h3>
+            </a>
+          </div>
+          <div
+            style={{ width: "60%", display: "flex", justifyContent: "center" }}
           >
-            <input
-              type="checkbox"
-              value=""
-              class="sr-only peer"
-              onClick={() => toggleSubmit()}
-            />
-            <p
-              style={{
-                position: "absolute",
-                left: "-25px",
-                color: "white",
-                fontWeight: "bold",
-              }}
-            >
-              Fr
-            </p>
-            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-violet-700"></div>
-            <span class="ml-2">
-              <span style={{ color: "white", fontWeight: "bold" }}>En</span>
-            </span>
-          </label>
+            <ul>
+              <li data-to-scrollspy-id="home">
+                {scrollToNextSection("home", text.home, handleClick)}
+              </li>
+              <li data-to-scrollspy-id="about">
+                {scrollToNextSection("about", text.about, handleClick)}
+              </li>
+              <li data-to-scrollspy-id="skills">
+                {scrollToNextSection("skills", text.skills, handleClick)}
+              </li>
+              <li data-to-scrollspy-id="contact">
+                {scrollToNextSection("contact", text.contact, handleClick)}
+              </li>
+            </ul>
+          </div>
+          <div
+            style={{ width: "20%", display: "flex", justifyContent: "center" }}
+          >
+            <label class="relative inline-flex items-center justify-center cursor-pointer">
+              <input
+                type="checkbox"
+                value=""
+                class="sr-only peer"
+                onClick={() => toggleSubmit()}
+              />
+              <p
+                style={{
+                  position: "absolute",
+                  left: "-22px",
+                  color: "white",
+                  fontWeight: "bold",
+                }}
+              >
+                Fr
+              </p>
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-violet-700"></div>
+              <span class="ml-2">
+                <span style={{ color: "white", fontWeight: "bold" }}>En</span>
+              </span>
+            </label>
+          </div>
         </nav>
       </header>
     </div>

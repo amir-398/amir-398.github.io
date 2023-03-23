@@ -19,12 +19,11 @@ export default function Home({ scrollToNextSection, text }) {
         <AnimatedTitle text={text} />
         <h1>{text.title}</h1>
         <h3>{text.sub_title}</h3>
-
-        {scrollToNextSection(
-          "about",
-          <button className="button">{text.home_btn} </button>
-        )}
       </div>
+      {scrollToNextSection(
+        "about",
+        <button className="button">{text.home_btn} </button>
+      )}
       <img className="rock" src={rock} alt="the moon" />
       <img className="rocket" src={rocket} alt="rocket" />
       <div className="guide">

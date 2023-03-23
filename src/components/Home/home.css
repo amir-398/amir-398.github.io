@@ -4,6 +4,7 @@
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -15,18 +16,26 @@
   justify-content: center;
 }
 
+.h-textContainer {
+  height: 250px;
+}
 .h-textContainer h1 {
   color: white;
   font-weight: 700;
   font-size: 50px;
   line-height: 56px;
   margin-bottom: 1.2rem;
+  text-size-adjust: auto;
 }
 .h-textContainer h3 {
   color: #B740A7;
   font-weight: bold;
   font-size: 22px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-align: center;
 }
 
 .button {
@@ -70,10 +79,10 @@
   width: 11rem;
   left: 5rem;
   top: 18em;
-  animation: 10s infinite test;
+  animation: 10s infinite levitation;
 }
 
-@keyframes test {
+@keyframes levitation {
   0% {
     transform: translateY(0);
   }
@@ -87,8 +96,7 @@
   height: 5rem;
   top: 8rem;
   right: 25rem;
-  animation: 10s infinite test;
-  -webkit-animation: 10s infinite test;
+  animation: 10s infinite levitation;
 }
 
 .littleRocks {
@@ -97,7 +105,7 @@
   right: 8rem;
   width: 10rem;
   height: 5rem;
-  animation: 10s infinite test;
+  animation: 10s infinite levitation;
 }
 
 .rockDown {
@@ -106,7 +114,7 @@
   height: 3rem;
   top: 5rem;
   left: 25rem;
-  animation: 10s infinite test;
+  animation: 10s infinite levitation;
 }
 
 .rocket {
@@ -127,48 +135,6 @@
   }
   100% {
     transform: rotate(120deg);
-  }
-}
-.rocketLaunch {
-  position: absolute;
-  width: 3rem;
-  height: 6rem;
-  right: 13rem;
-  bottom: 10rem;
-  animation: 5s ease-out forwards rocketLaunch, 5s ease-out forwards 5s rocketDown;
-  transform: rotate(180deg);
-}
-
-.rocketContainer {
-  position: absolute;
-  right: 14.3rem;
-  bottom: 15rem;
-  border: 3px solid blue;
-  animation: 2s ease-in-out forwards trace;
-}
-
-@keyframes trace {
-  from {
-    height: 0;
-  }
-  to {
-    height: 110px;
-  }
-}
-@keyframes rocketLaunch {
-  from {
-    transform: rotate(120deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-@keyframes rocketDown {
-  from {
-    bottom: 10rem;
-  }
-  to {
-    bottom: -50px;
   }
 }
 .guide {
@@ -219,8 +185,8 @@
 }
 /*Responsive*/
 @media screen and (max-width : 1024px) {
-  .h-textContainer > h2 {
-    font-size: 32px;
+  .h-textContainer h1 {
+    font-size: 40px;
   }
   .earth {
     width: 18rem;
@@ -238,10 +204,9 @@
     padding: 8px 50px;
   }
 }
-@media screen and (max-width : 768px) {
-  .h-textContainer > h2 {
-    font-size: 19px;
-    margin: 0;
+@media screen and (max-width: 920px) {
+  .h-textContainer h1 {
+    margin-top: 1rem;
   }
   .earth {
     height: 12rem;
@@ -254,7 +219,6 @@
     display: none;
   }
   .button {
-    margin-top: 2rem;
     font-size: 16px;
     padding: 10px 30px;
   }
@@ -269,8 +233,20 @@
     left: 3rem;
   }
   .littleRocks {
-    bottom: 5rem;
-    right: auto;
+    bottom: 4rem;
+    left: 50%;
+    animation: 10s infinite levitation-sm;
+  }
+  @keyframes levitation-sm {
+    0% {
+      transform: translateY(0) translateX(-50%);
+    }
+    50% {
+      transform: translateY(1.5rem) translateX(-50%);
+    }
+    100% {
+      transform: translateY(0) translateX(-50%);
+    }
   }
   .star1 {
     width: 10px;
@@ -280,10 +256,35 @@
     width: 3px;
   }
 }
+@media screen and (max-width: 620px) {
+  .h-textContainer h1 {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .h-textContainer h1 {
+    font-size: 30px;
+  }
+}
 @media screen and (max-width : 430px) {
-  .h-textContainer > h2 {
-    font-size: 16px;
+  .h-textContainer {
+    height: 200px;
+  }
+  .h-textContainer h1 {
+    font-size: 22px;
     margin: 0;
+  }
+  .h-textContainer h3 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width : 375px) {
+  .h-textContainer h1 {
+    margin-top: -0.5rem;
+    font-size: 20px;
+  }
+  .h-textContainer h3 {
+    font-size: 15px;
   }
 }
 

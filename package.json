@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@frank-mayer/react-tag-cloud": "^1.1.1",
     "@rneui/themed": "^4.0.0-rc.7",
     "@testing-library/jest-dom": "^5.16.5",

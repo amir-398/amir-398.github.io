@@ -28,7 +28,7 @@
 }
 @media screen and (max-width: 1024px){
     .text-animation span{
-        font-size: 50px;
+        font-size: 30px;
     }
 } 
 @media screen and (max-width: 768px){
@@ -37,11 +37,16 @@
         margin-bottom: -15px;
     }
 .text-animation span{
-    font-size: 35px;
+    font-size: 30px;
 }
+}
+@media screen and (max-width: 430px){
+    .text-animation span{
+        font-size: 22px;
+    }
 }
 @media screen and (max-width: 375px){
     .text-animation span{
-        font-size: 30px;
+        font-size: 20px;
     }
 }
