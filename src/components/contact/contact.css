@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  padding-right: 15px;
 }
 
 .formContainer {
@@ -53,9 +54,10 @@
 .formContainer form textarea {
   height: 15rem;
 }
-.formContainer form .btn-3 {
-  width: 60%;
+.formContainer form .submitBtn {
+  padding: 10px 30px;
   margin-top: 1rem;
+  font-size: 20px;
 }
 
 .astroContainer {
@@ -130,28 +132,28 @@
   .formContainer h2 {
     font-size: 2rem;
   }
-  .btn-3 {
+  .formContainer form .submitBtn {
     font-size: 15px;
   }
 }
-@media screen and (max-width : 430px) {
+@media screen and (max-width : 768px) {
   .contactContainer {
+    height: 100%;
+    padding-top: 2rem;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     position: relative;
+  }
+  .formContainer {
+    width: 100%;
+    z-index: 1;
   }
   .formContainer h2 {
     font-size: 1.5rem;
   }
   .astroContainer {
     width: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .formContainer {
-    width: 100%;
-    z-index: 1;
   }
   .btn-3 {
     font-size: 12px;

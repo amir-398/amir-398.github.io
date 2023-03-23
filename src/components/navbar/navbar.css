@@ -77,6 +77,11 @@
   width: 100%;
   left: 0%;
 }
+.navbar .togglerContainer {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
 
 .navbar-bck {
   backdrop-filter: blur(10px);
@@ -86,16 +91,6 @@
   border-bottom: 3px solid #B740A7;
 }
 
-@media screen and (max-width : 1024px) {
-  .navbar .resume a h3 {
-    font-size: 20px;
-    color: white;
-  }
-  .navbar .resume a img {
-    width: 25px;
-    height: 25px;
-  }
-}
 @media screen and (max-width: 920px) {
   .hambuger-menu {
     display: block;
@@ -122,13 +117,16 @@
     display: flex;
     flex-direction: column;
   }
-  .navbar h3 {
+  .navbar .resume {
+    width: fit-content;
     position: absolute;
-    top: 0px;
-    right: 20px;
+    top: 1rem;
+    right: 2rem;
   }
-  .resume {
-    margin-top: 1rem;
+  .navbar .togglerContainer {
+    position: absolute;
+    top: 1.5rem;
+    left: 5rem;
   }
   .navbar_active {
     transform: translateX(0);

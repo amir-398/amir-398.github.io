@@ -67,7 +67,7 @@ function Contact({ text }) {
             rows="10"
             placeholder="Message"
           />
-          <button onClick={handleSumbit} className="button btn-3">
+          <button onClick={handleSumbit} className="button submitBtn">
             {text.btn_contact}
           </button>
         </form>

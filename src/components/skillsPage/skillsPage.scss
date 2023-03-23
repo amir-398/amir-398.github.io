@@ -131,7 +131,19 @@ margin-bottom: 10px;
   }
   
 //responsive
+@media screen and (max-width : 1210px) {
+    #myCanvas {
+        width: 550px;
+        height: 550px;
+    }
+}
+
+
 @media #{$md-media}{
+.btn-4{
+    margin-bottom: 10rem;
+}
+  
 #myCanvas {
     width: 500px;
     height: 500px;
@@ -140,6 +152,9 @@ margin-bottom: 10px;
     width: 12rem;
     height: 12rem;
     right: 16%;
+}
+.skillsContainer {
+    height: 60%;
 }
 .skillsCards {
     height: 6rem;
@@ -154,7 +169,10 @@ margin-bottom: 10px;
 }
 }
   // responsive 768px
-  @media #{$sm-media}{
+  @media screen and (max-width : 920px) {
+    .btn-4{
+        margin-bottom: 0;
+    }
     .infoPageContainer{
         height: 100%;
     }
@@ -164,6 +182,9 @@ margin-bottom: 10px;
         align-items: center;
         justify-content: center;
         padding: 0 5%;
+    }
+    .btnContainer{
+        height: 8rem
     }
     .astronaute {
         top: 10rem;
@@ -224,7 +245,7 @@ height: 100%;
 }    
   }
 
-  //responsive 425px
+  //responsive 430px
    @media #{$xs-media}{
     #myCanvas{
         width: 100%;
@@ -235,6 +256,19 @@ height: 100%;
     }
     .topWrapper{
         padding: 0 10%;
+    }
+    .btn-4 {
+        position: static;
+        transform: translateX(0);
+    }
+   }
+   @media #{$xxs-media} {
+    
+    .skillsCards {
+        width : 40%
+    }
+    .topWrapper{
+        padding: 0 5%;
     }
     .btn-4 {
         position: static;

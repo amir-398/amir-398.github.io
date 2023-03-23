@@ -188,6 +188,9 @@ a {
   .h-textContainer h1 {
     font-size: 40px;
   }
+  .guide {
+    right: 1rem;
+  }
   .earth {
     width: 18rem;
     height: 18rem;
@@ -266,7 +269,7 @@ a {
     font-size: 30px;
   }
 }
-@media screen and (max-width : 430px) {
+@media screen and (max-width : 445px) {
   .h-textContainer {
     height: 200px;
   }

@@ -9,7 +9,7 @@ import "./home.css";
 import MouseF from "../mouseFollower/MouseF";
 export default function Home({ scrollToNextSection, text }) {
   return (
-    <div id="home" className="homeContainer">
+    <section id="home" className="homeContainer">
       <MouseF />
       <img className="rock1" src={rock} alt="the moon" />
       <img className="littleRocks" src={littleRocks} alt="the moon" />
@@ -31,6 +31,6 @@ export default function Home({ scrollToNextSection, text }) {
         <div className="star1"></div>
         <div className="neon-line2"></div>
       </div>
-    </div>
+    </section>
   );
 }

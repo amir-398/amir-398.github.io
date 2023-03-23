@@ -85,9 +85,7 @@ function Navbar({ scrollToNextSection, navbarIsVisible, language, text }) {
               </li>
             </ul>
           </div>
-          <div
-            style={{ width: "20%", display: "flex", justifyContent: "center" }}
-          >
+          <div className="togglerContainer">
             <label class="relative inline-flex items-center justify-center cursor-pointer">
               <input
                 type="checkbox"
