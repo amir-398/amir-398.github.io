@@ -10,7 +10,7 @@
   width: 200px;
   height: 200px;
   margin: auto;
-  background: url("../../assets/svg/logo.png") no-repeat 50%/70% rgba(0, 0, 0, 0.1);
+  background: url("../../assets/pics/logo.png") no-repeat 50%/70% rgba(0, 0, 0, 0.1);
   color: #B740A7;
   box-shadow: inset 0 0 0 2px rgba(183, 64, 167, 0.5);
   display: flex;
@@ -66,12 +66,6 @@
     opacity: 1;
   }
 }
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .my-node-enter {
   opacity: 0;
 }

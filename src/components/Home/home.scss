@@ -1,7 +1,7 @@
 @import "../../cssConstants/responsive.scss";
 @import "../../cssConstants/colors.scss";
 .homeContainer {
-    background-image: url("../../assets/svg/bck.png");
+    background-image: url("../../assets/pics/bck.png");
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -38,7 +38,7 @@ a {
     text-align: center;
 }
 .button  {
-        background-color: #135d9e;
+        background :  linear-gradient(90deg, rgba(217,0,255,1) 0%, rgba(118,0,255,1) 41%);
         border-radius: 100px;
         box-shadow: rgba(149, 6, 152, 0.2) 0 -25px 18px -14px inset,rgba(185, 44, 187, 0.15) 0 1px 2px,rgba(170, 44, 187, 0.15) 0 2px 4px,rgba(187, 44, 161, 0.15) 0 4px 8px,rgba(187, 44, 170, 0.15) 0 8px 16px,rgba(187, 44, 180, 0.15) 0 16px 32px;
         color: rgb(237, 237, 237);
@@ -183,7 +183,7 @@ a {
     }   
 }
 .guide {
-    right: 1rem;
+    right: 2rem;
 }
 .earth {
     width: 18rem;
@@ -288,7 +288,7 @@ a {
     .h-textContainer  {
         h1 {
             margin-top: -0.5rem;
-            font-size: 20px;
+            font-size: 22px;
         }
         h3 {
             font-size: 15px;

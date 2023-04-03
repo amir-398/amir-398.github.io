@@ -1,5 +1,5 @@
-import React, { Fragment, useEffect, useState, useRef } from "react";
-import astronaute from "../../assets/svg/astro.png";
+import React, { useRef } from "react";
+import astronaute from "../../assets/pics/astro.png";
 import "./skillsPage.css";
 import SkillsSphere from "./SkillsSphere";
 import htmlIcon from "../../assets/skillsIcons/html-5.png";
@@ -8,7 +8,6 @@ import jsIcon from "../../assets/skillsIcons/script-java.png";
 import phpIcon from "../../assets/skillsIcons/php.png";
 import reactIcon from "../../assets/skillsIcons/structure.png";
 import tsIcon from "../../assets/skillsIcons/typescript.png";
-import symfonyIcon from "../../assets/skillsIcons/symfony.png";
 import gitIcon from "../../assets/skillsIcons/git.png";
 import bootstrapIcon from "../../assets/skillsIcons/bootstrap.png";
 import sassIcon from "../../assets/skillsIcons/sass.png";
@@ -35,7 +34,7 @@ export default function InfoPage({ scrollToNextSection, text }) {
 
   return (
     <>
-      <div id="skills" className="infoPageContainer" ref={componentRef}>
+      <section id="skills" className="infoPageContainer" ref={componentRef}>
         <Overlay componentRef={componentRef} />
         <div className="topWrapper">
           <img className="astronaute" src={astronaute} alt="astronaute" />
@@ -57,7 +56,7 @@ export default function InfoPage({ scrollToNextSection, text }) {
             <button className="button btn-4">{text.btn_next} </button>
           )}
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -37,12 +37,14 @@
         margin-bottom: -15px;
     }
 .text-animation span{
-    font-size: 30px;
+    font-size: 28px;
+    letter-spacing: -3px;
 }
 }
-@media screen and (max-width: 430px){
+@media screen and (max-width: 445px){
     .text-animation span{
-        font-size: 22px;
+        font-size: 18px;
+        letter-spacing: -3px;
     }
 }
 @media screen and (max-width: 375px){

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { IoLocation, IoCallSharp, IoMail } from "react-icons/io5";
-import star from "../../assets/svg/star.svg";
-import logo from "../../assets/svg/logo.png";
-import igIcon from "../../assets/svg/instagram.png";
-import lkIcon from "../../assets/svg/linkedin.png";
+import star from "../../assets/pics/star.svg";
+import logo from "../../assets/pics/logo.png";
+import igIcon from "../../assets/pics/instagram.png";
+import lkIcon from "../../assets/pics/linkedin.png";
 import "./footer.css";
 export default function Footer() {
   const [stars, setStars] = useState([]);
@@ -41,21 +41,26 @@ export default function Footer() {
           <h2>Amir Meberbeche</h2>
           <p>
             <IoCallSharp />
-            (+33) 6.01.77.08.14
+            <a href="tel:+33601770814">(+33) 6.01.77.08.14</a>
           </p>
           <p>
             <IoMail />
-            amir.398@hotmail.fr
+            <a href="mailto: amir.398@hotmail.fr">amir.398@hotmail.fr</a>
           </p>
         </div>
         <div className="socialContainer">
           <div className="icons">
-            <a href="">
-              {" "}
-              <img src={igIcon} alt="instagram" />
+            <a
+              href="https://instagram.com/amir_meberbeche?igshid=OGRjNzg3M2Y="
+              target="_blank"
+            >
+              <img src={igIcon} alt="instagram Icon" />
             </a>
-            <a href="">
-              <img src={lkIcon} alt="linkedin" />
+            <a
+              href="https://www.linkedin.com/in/amir-meberbeche-337968249/"
+              target="_blank"
+            >
+              <img src={lkIcon} alt="linkedin Icon" />
             </a>
           </div>
           <p>Copyright 2023. All Rights Reserved</p>

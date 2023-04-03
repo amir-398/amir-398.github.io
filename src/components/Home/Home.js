@@ -1,9 +1,10 @@
 import React from "react";
-import earth from "../../assets/svg/earth.png";
-import rock from "../../assets/svg/rock.png";
-import littleRocks from "../../assets/svg/little_rocks.png";
-import rockDown from "../../assets/svg/rockDown.png";
-import rocket from "../../assets/svg/rocket.png";
+import earth from "../../assets/pics/earth.png";
+import earthL from "../../assets/pics/earth2.png";
+import rock from "../../assets/pics/rock.png";
+import littleRocks from "../../assets/pics/little_rocks.png";
+import rockDown from "../../assets/pics/rockDown.png";
+import rocket from "../../assets/pics/rocket.png";
 import AnimatedTitle from "./AnimatedTitle";
 import "./home.css";
 import MouseF from "../mouseFollower/MouseF";
@@ -14,7 +15,7 @@ export default function Home({ scrollToNextSection, text }) {
       <img className="rock1" src={rock} alt="the moon" />
       <img className="littleRocks" src={littleRocks} alt="the moon" />
       <img className="rockDown" src={rockDown} alt="the moon" />
-      <img className="earth" src={earth} alt="the earth" />
+      <img className="earth" src={earthL} alt="the earth" />
       <div className="h-textContainer">
         <AnimatedTitle text={text} />
         <h1>{text.title}</h1>

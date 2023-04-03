@@ -1,13 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./navbar.css";
 import hamburger from "../../assets/menu/menu.png";
+import svgHamburger from "../../assets/svg/hamburger.svg";
 import { IoCloudDownloadSharp } from "react-icons/io5";
-import cv from "../../assets/cv/AMIR MEBERBECHE.pdf";
-import downloadIcon from "../../assets/svg/telecharger.png";
+import cv from "../../assets/cv/CV-AMIR MEBERBECHE.pdf";
+import downloadIcon from "../../assets/pics/telecharger.png";
 function Navbar({ scrollToNextSection, navbarIsVisible, language, text }) {
   const navbar = useRef(null);
   const [isFrensh, setIsFrensh] = useState(true);
   const [loading, setLoading] = useState(false);
+  const hamburger = useRef(null);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -16,11 +18,15 @@ function Navbar({ scrollToNextSection, navbarIsVisible, language, text }) {
   //language toggle
   const toggleSubmit = () => {
     setLoading(true);
+    body.style.overflow = "hidden";
     setTimeout(() => {
       setIsFrensh(!isFrensh);
+      navbar.current.classList.remove("navbar_active");
+      hamburger.current.classList.toggle("active");
     }, 500);
     setTimeout(() => {
       setLoading(false);
+      body.style.overflow = "auto";
     }, 3000);
   };
   useEffect(() => {
@@ -29,6 +35,7 @@ function Navbar({ scrollToNextSection, navbarIsVisible, language, text }) {
   const body = document.querySelector("body");
   const handleClick = () => {
     navbar.current.classList.remove("navbar_active");
+    hamburger.current.classList.remove("active");
     body.style.overflow = "auto";
   };
   //open cv
@@ -40,7 +47,7 @@ function Navbar({ scrollToNextSection, navbarIsVisible, language, text }) {
 
   const handleToggle = () => {
     navbar.current.classList.toggle("navbar_active");
-
+    hamburger.current.classList.toggle("active");
     if (navbar.current.classList.contains("navbar_active")) {
       body.style.overflow = "hidden";
     } else {
@@ -51,12 +58,32 @@ function Navbar({ scrollToNextSection, navbarIsVisible, language, text }) {
   return (
     <div>
       <header>
-        <img
-          className="hambuger-menu"
-          onClick={handleToggle}
-          src={hamburger}
-          alt="menu hamburger"
-        />
+        <svg
+          width="60"
+          height="60"
+          viewBox="0 0 32 42"
+          ref={hamburger}
+          onClick={() => handleToggle()}
+        >
+          <g transform="matrix(1,0,0,1,-389.5,-264.004)">
+            <g id="arrow_left2">
+              <g transform="matrix(1,0,0,1,0,5)">
+                <path
+                  id="top"
+                  d="M390,270L420,270L420,270C420,270 420.195,250.19 405,265C389.805,279.81 390,279.967 390,279.967"
+                />
+              </g>
+              <g transform="matrix(1,1.22465e-16,1.22465e-16,-1,0.00024296,564.935)">
+                <path
+                  id="bottom"
+                  d="M390,270L420,270L420,270C420,270 420.195,250.19 405,265C389.805,279.81 390,279.967 390,279.967"
+                />
+              </g>
+              <path id="middle" d="M390,284.967L420,284.967" />
+            </g>
+          </g>
+        </svg>
+
         <nav
           ref={navbar}
           className={`navbar ${navbarIsVisible ? "" : "navbar-bck"} `}

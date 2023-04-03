@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
 import TagCanvas from "tag-canvas";
-import astronaute from "../../assets/svg/astro.png";
+
 import "./skillsPage.css";
 function SkillsSphere() {
   useEffect(() => {
@@ -31,7 +30,6 @@ function SkillsSphere() {
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
     const img = new Image();
-    img.src = { astronaute };
     img.onload = function () {
       ctx.drawImage(
         img,

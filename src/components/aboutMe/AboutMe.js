@@ -1,11 +1,11 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import "./aboutMe.css";
 import Overlay from "../overlayStarLight/Overlay";
 
 export default function AboutMe({ scrollToNextSection, text }) {
   const componentRef = useRef(null);
   return (
-    <div id="about" className="aboutMecontainer" ref={componentRef}>
+    <section id="about" className="aboutMecontainer" ref={componentRef}>
       <Overlay componentRef={componentRef} />
       {/* <div className="moon">
         <Moon />
@@ -25,6 +25,6 @@ export default function AboutMe({ scrollToNextSection, text }) {
         "skills",
         <button className="button btn-2">{text.btn_next} </button>
       )}
-    </div>
+    </section>
   );
 }

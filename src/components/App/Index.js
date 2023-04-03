@@ -62,9 +62,8 @@ export default function Index() {
         timeout={500}
         classNames="my-node"
       >
-        <Loading title="Changement de la langue" ref={nodeRef} />
+        <Loading title={text.lng} ref={nodeRef} />
       </CSSTransition>
-
       <Navbar
         scrollToNextSection={scrollToNextSection}
         language={language}
@@ -77,6 +76,7 @@ export default function Index() {
           scrollToNextSection={scrollToNextSection}
           text={text}
         />
+
         <InfoPage
           scrollToNextSection={scrollToNextSection}
           id="skills"

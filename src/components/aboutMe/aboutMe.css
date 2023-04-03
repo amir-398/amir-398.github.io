@@ -1,5 +1,5 @@
 .aboutMecontainer {
-  background-image: url("../../assets/svg/bck.png");
+  background-image: url("../../assets/pics/bck.png");
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -31,23 +31,6 @@
   padding: 20px;
 }
 
-.moon {
-  margin-right: -100px;
-}
-
-.moonCanvas > canvas:first-child {
-  display: none !important;
-}
-
-.show {
-  color: red;
-}
-
-.filterGone {
-  opacity: 0;
-  z-index: 0;
-}
-
 @media screen and (max-width: 1400px) {
   .textsContainer p {
     font-size: 14px;
@@ -60,7 +43,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: fit-content;
+    height: 100vh;
     gap: 2rem;
   }
   .textsContainer {
@@ -90,14 +73,6 @@
     width: 10px;
     height: 10px;
   }
-  .neon-line3 {
-    width: 3px;
-    animation: animation-sm 2s ease-in-out forwards;
-  }
-  .neon-line4 {
-    width: 3px;
-    animation: animation-sm 2s 4s ease-in-out forwards;
-  }
   @keyframes animation-sm {
     from {
       height: 0%;
@@ -108,6 +83,11 @@
   }
   .moonCanvas {
     width: 500px;
+  }
+}
+@media screen and (max-width : 445px) {
+  .aboutMecontainer {
+    height: 100%;
   }
 }
 

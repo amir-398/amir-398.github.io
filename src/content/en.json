@@ -4,7 +4,7 @@
     "about" : "About",
     "skills" : "Skills",
     "contact" : "Contact",
-    "my_name" : "HI, I AM AMIR",
+    "my_name" : "HI I AM AMIR",
     "title" : "Junior web developer in Paris",
     "sub_title" : "LET'S EXPLORE MY UNIVERSE TOGETHER",
     "home_btn" : "START MISSION",
@@ -14,5 +14,6 @@
     "btn_next" : "NEXT MISSION",
     "contact_title" : "Get in Touch",
     "input_name" : "Name",
-    "btn_contact" : "Finish MISSION"
+    "btn_contact" : "Finish MISSION",
+    "lng" : "Changing langage"
 }

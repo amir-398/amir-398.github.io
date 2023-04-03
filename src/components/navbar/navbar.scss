@@ -1,6 +1,6 @@
 @import "../../cssConstants/colors.scss";
 @import "../../cssConstants/responsive.scss";
-.hambuger-menu {
+svg {
     display: none;
 }
 .navbar {
@@ -102,7 +102,19 @@
         top: 10px;
         z-index: 600;
     }
-
+    svg {
+        display: block;
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 1.5;
+        cursor:pointer;
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        z-index: 600;
+      }
     .navbar {
         background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0) );
         backdrop-filter: blur(10px);
@@ -126,8 +138,8 @@
         }
         .togglerContainer {
             position: absolute;
-            top: 1.5rem;
-            left: 5rem;
+            top: 5rem;
+            right: 5rem;
         }
     }
     
@@ -136,3 +148,45 @@
     }
     
 }
+
+
+  svg path {
+    fill: none;
+    stroke: rgba(118,0,255,1) ;
+    stroke-width: 3px;
+  }
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #top,
+  #bottom {
+    stroke-dasharray: 30, 75.39;
+    transition: all 0.6s cubic-bezier(0.6, 0.33, 0.67, 1.29);
+  }
+
+  svg.active #top,
+  svg.active #bottom {
+    stroke-dasharray: 75.39;
+    stroke-dashoffset: -60;
+  }
+
+  svg:nth-child(2) {
+    transform: rotate(0deg);
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  svg:nth-child(2) path {
+    transition: all 0.4s ease-in-out 0.6s;
+  }
+
+  svg:nth-child(2).active {
+    transform: rotate(180deg);
+  }
+
+  .rocket #top {
+    stroke-dasharray: 30, 88;
+  }

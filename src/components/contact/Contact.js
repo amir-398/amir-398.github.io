@@ -1,11 +1,11 @@
-import React, { useRef, useState, useEffect } from "react";
-import astroContact from "../../assets/svg/astroContact.png";
-import planet01 from "../../assets/svg/planet01.png";
-import planet02 from "../../assets/svg/planet02.png";
-import planet03 from "../../assets/svg/planet03.png";
-import planet04 from "../../assets/svg/planet05.png";
-import planet05 from "../../assets/svg/planet06.png";
-import planet06 from "../../assets/svg/planet07.png";
+import React, { useRef, useState } from "react";
+import astroContact from "../../assets/pics/astroContact.png";
+import planet01 from "../../assets/pics/planet01.png";
+import planet02 from "../../assets/pics/planet02.png";
+import planet03 from "../../assets/pics/planet03.png";
+import planet04 from "../../assets/pics/planet05.png";
+import planet05 from "../../assets/pics/planet06.png";
+import planet06 from "../../assets/pics/planet07.png";
 import Overlay from "../overlayStarLight/Overlay";
 import "./contact.css";
 function Contact({ text }) {
@@ -31,7 +31,7 @@ function Contact({ text }) {
   };
 
   return (
-    <div ref={componentRef} id="contact" className="contactContainer">
+    <section ref={componentRef} id="contact" className="contactContainer">
       <Overlay componentRef={componentRef} />
       <div className="astroContainer">
         <img className="planet1" src={planet01} alt="" />
@@ -72,7 +72,7 @@ function Contact({ text }) {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 }
 

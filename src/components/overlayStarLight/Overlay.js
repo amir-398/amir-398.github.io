@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-
+import "./overlay.css";
 export default function Overlay({ componentRef }) {
   const [animation, setAnimation] = useState(false);
   const [starLight, setStarLight] = useState(null);
   const [filter, setFilter] = useState(null);
+  const [filterNone, setFilterNone] = useState(null);
   useEffect(() => {
     const handleScroll = () => {
       const componentPosition = componentRef.current.offsetTop;
@@ -30,12 +31,15 @@ export default function Overlay({ componentRef }) {
       }, 2000);
       setTimeout(() => {
         setFilter("filterGone");
-      }, 3000);
+      }, 2000);
+      setTimeout(() => {
+        setFilterNone("filterNone");
+      }, 3500);
     }
   }, [animation]);
   return (
     <>
-      <div className={`overlay ${filter}`}></div>
+      <div className={`overlay ${filter + " " + filterNone}`}></div>
       <div className="guide">
         <div style={{ height: "50%" }}>
           <div

@@ -1,6 +1,6 @@
 @import "../../cssConstants/responsive.scss";
 .infoPageContainer {
-    background-image: url("../../assets/svg/bck.png");
+    background-image: url("../../assets/pics/bck.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -79,14 +79,6 @@ margin-bottom: 10px;
     width: 4rem;
     height: 4rem;
 }
-  .overlay{
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    transition: 2s ease-in;
-    z-index: 5000;
- }
 
 .star2{
     width: 20px;
@@ -103,7 +95,7 @@ margin-bottom: 10px;
     width: 4px;
     background-color: #fff;
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
-    animation: position1 2s ease-in-out forwards,neon 1s 2s ease-in-out infinite alternate ;
+    animation: position1 1.5s ease-in-out forwards,neon 1s ease-in-out infinite alternate ;
   }
  
 .neon-line6 {
@@ -240,9 +232,6 @@ margin-bottom: 10px;
    height: 100%;
   }
 }
-.overlay {
-height: 100%;
-}    
   }
 
   //responsive 430px

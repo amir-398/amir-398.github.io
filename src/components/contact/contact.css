@@ -1,5 +1,5 @@
 .contactContainer {
-  background-image: url("../../assets/svg/bck.png");
+  background-image: url("../../assets/pics/bck.png");
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -43,9 +43,6 @@
   font-weight: 600;
   color: white;
   background-color: rgba(255, 255, 255, 0.1);
-}
-.formContainer form input:focus, .formContainer form textarea:focus {
-  border-color: red;
 }
 .formContainer form input::placeholder, .formContainer form textarea::placeholder {
   color: white;
@@ -120,14 +117,6 @@
     transform: translateY(7px);
   }
 }
-.overlayContact {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
 @media screen and (max-width : 1024px) {
   .formContainer h2 {
     font-size: 2rem;
@@ -139,14 +128,14 @@
 @media screen and (max-width : 768px) {
   .contactContainer {
     height: 100%;
-    padding-top: 2rem;
+    padding: 0;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    position: relative;
   }
   .formContainer {
     width: 100%;
+    margin-top: 2rem;
     z-index: 1;
   }
   .formContainer h2 {

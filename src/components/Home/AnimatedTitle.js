@@ -5,30 +5,32 @@ import "./animatedTitle.css";
 export default function AnimatedTitle({ text }) {
   const [lettersHtml, setLettersHtml] = useState("");
   const lettersRef = useRef([]);
-
+  let textd = text.my_name;
   useEffect(() => {
-    const titleText = "HI I AM AMIR";
-    const letterSpans = titleText.split("").map((letter, i) => {
-      if (letter === " ") {
-        return (
-          <span key={i} char=" " ref={(el) => (lettersRef.current[i] = el)}>
-            &nbsp;
-          </span>
-        );
-      } else {
-        return (
-          <span
-            key={i}
-            char={letter}
-            ref={(el) => (lettersRef.current[i] = el)}
-          >
-            {letter}
-          </span>
-        );
-      }
-    });
-    setLettersHtml(letterSpans);
-  }, []);
+    if (textd) {
+      const titleText = textd;
+      const letterSpans = titleText.split("").map((letter, i) => {
+        if (letter === " ") {
+          return (
+            <span key={i} char=" " ref={(el) => (lettersRef.current[i] = el)}>
+              &nbsp;
+            </span>
+          );
+        } else {
+          return (
+            <span
+              key={i}
+              char={letter}
+              ref={(el) => (lettersRef.current[i] = el)}
+            >
+              {letter}
+            </span>
+          );
+        }
+      });
+      setLettersHtml(letterSpans);
+    }
+  }, [textd]);
 
   let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%*-+?";
   const shuffleLetters = (chars) => {

@@ -1,10 +1,10 @@
 {
     "cv" : "Curriculum vitae",
-    "home" : "Acceuil",
-    "about" : "A propos",
+    "home" : "Accueil",
+    "about" : "À propos",
     "skills" : "Compétences",
     "contact" : "Contacter",
-    "my_name" : "bonjour, je m'appelle Amir",
+    "my_name" : "Bonjour Je suis Amir",
     "title" : "Développeur web Junior à Paris",
     "sub_title" : "EXPLORONS ENSEMBLE MON UNIVERS",
     "home_btn" : "LANCER LA MISSION",
@@ -14,6 +14,8 @@
     "contact_title" : "Contactez-moi",
     "btn_next" : "MISSION SUIVANTE",
     "input_name" : "nom",
-    "btn_contact" : "TERMINER LA MISSION"
+    "btn_contact" : "TERMINER LA MISSION",
+    "lng" : "Changement de la langue"
+    
 
 }
