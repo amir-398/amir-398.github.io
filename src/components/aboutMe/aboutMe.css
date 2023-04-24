@@ -46,6 +46,9 @@
     height: 100vh;
     gap: 2rem;
   }
+  .overlay {
+    height: 100%;
+  }
   .textsContainer {
     margin-left: 0;
     margin-right: 0;

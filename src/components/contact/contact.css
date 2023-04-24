@@ -133,6 +133,9 @@
     flex-direction: column-reverse;
     justify-content: center;
   }
+  .overlay {
+    height: 100%;
+  }
   .formContainer {
     width: 100%;
     margin-top: 2rem;

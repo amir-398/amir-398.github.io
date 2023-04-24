@@ -39,9 +39,9 @@ export default function InfoPage({ scrollToNextSection, text }) {
         <div className="topWrapper">
           <img className="astronaute" src={astronaute} alt="astronaute" />
           <div className="skillsContainer">
-            {skills.map((add) => {
+            {skills.map((add, index) => {
               return (
-                <div className="skillsCards">
+                <div className="skillsCards" key={index}>
                   <p>{add.skill}</p>
                   <img src={add.icon} alt="" />
                 </div>

@@ -85,7 +85,6 @@
   height: 4rem;
 }
 
-
 .star2 {
   width: 20px;
   height: 20px;
@@ -168,6 +167,9 @@
   .btn-4 {
     margin-bottom: 0;
   }
+  .overlay {
+    height: 100%;
+  }
   .infoPageContainer {
     height: 100%;
   }
@@ -234,7 +236,6 @@
       height: 100%;
     }
   }
-  
 }
 @media screen and (max-width : 445px) {
   #myCanvas {

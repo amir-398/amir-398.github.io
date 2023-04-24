@@ -1,8 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./navbar.css";
-import hamburger from "../../assets/menu/menu.png";
-import svgHamburger from "../../assets/svg/hamburger.svg";
-import { IoCloudDownloadSharp } from "react-icons/io5";
 import cv from "../../assets/cv/CV-AMIR MEBERBECHE.pdf";
 import downloadIcon from "../../assets/pics/telecharger.png";
 function Navbar({ scrollToNextSection, navbarIsVisible, language, text }) {
@@ -113,11 +110,11 @@ function Navbar({ scrollToNextSection, navbarIsVisible, language, text }) {
             </ul>
           </div>
           <div className="togglerContainer">
-            <label class="relative inline-flex items-center justify-center cursor-pointer">
+            <label className="relative inline-flex items-center justify-center cursor-pointer">
               <input
                 type="checkbox"
                 value=""
-                class="sr-only peer"
+                className="sr-only peer"
                 onClick={() => toggleSubmit()}
               />
               <p
@@ -130,8 +127,8 @@ function Navbar({ scrollToNextSection, navbarIsVisible, language, text }) {
               >
                 Fr
               </p>
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-violet-700"></div>
-              <span class="ml-2">
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-violet-700"></div>
+              <span className="ml-2">
                 <span style={{ color: "white", fontWeight: "bold" }}>En</span>
               </span>
             </label>

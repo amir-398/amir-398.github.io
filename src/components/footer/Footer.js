@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { IoLocation, IoCallSharp, IoMail } from "react-icons/io5";
+import { IoCallSharp, IoMail } from "react-icons/io5";
 import star from "../../assets/pics/star.svg";
-import logo from "../../assets/pics/logo.png";
+import logo from "../../assets/logo/logo_footer.png";
 import igIcon from "../../assets/pics/instagram.png";
 import lkIcon from "../../assets/pics/linkedin.png";
 import "./footer.css";
@@ -19,6 +19,7 @@ export default function Footer() {
           className="star"
           src={star}
           style={{ width: starSize, height: starSize }}
+          key={i}
         />,
       ];
     }

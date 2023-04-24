@@ -8,7 +8,7 @@ $path-width: 3px;
 
 $main-color: #B740A7;
 
-$codepen-logo-path: url('../../assets/pics/logo.png');
+$logo-path: url('../../assets/logo/logo_loading.png');
 
 %full-fill {
   position: absolute;
@@ -23,7 +23,7 @@ $codepen-logo-path: url('../../assets/pics/logo.png');
   width: $box-size;
   height: $box-size;
   margin: auto;
-  background: $codepen-logo-path no-repeat 50% / 70% rgba(#000, .1);
+  background: $logo-path no-repeat 60% / 80% rgba(#000, .1);
   color: $main-color;
   box-shadow: inset 0 0 0 2px rgba($main-color, .5);
   display: flex;
@@ -62,7 +62,7 @@ p {
   75% {clip: rect(0px, $clip-size, $clip-size, $clip-size - $path-width); }
 }
 .loadingContainer {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: #0f222b;

@@ -1,6 +1,5 @@
 import React from "react";
 import earth from "../../assets/pics/earth.png";
-import earthL from "../../assets/pics/earth2.png";
 import rock from "../../assets/pics/rock.png";
 import littleRocks from "../../assets/pics/little_rocks.png";
 import rockDown from "../../assets/pics/rockDown.png";
@@ -15,7 +14,7 @@ export default function Home({ scrollToNextSection, text }) {
       <img className="rock1" src={rock} alt="the moon" />
       <img className="littleRocks" src={littleRocks} alt="the moon" />
       <img className="rockDown" src={rockDown} alt="the moon" />
-      <img className="earth" src={earthL} alt="the earth" />
+      <img className="earth" src={earth} alt="the earth" />
       <div className="h-textContainer">
         <AnimatedTitle text={text} />
         <h1>{text.title}</h1>

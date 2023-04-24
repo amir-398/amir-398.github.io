@@ -14,7 +14,6 @@ import { CSSTransition } from "react-transition-group";
 export default function Index() {
   const [isFrench, setIsFrench] = useState(true);
   const [loading, setLoading] = useState(false);
-  console.log(loading);
   const [startLoading, setStartLoading] = useState(true);
   const [text, setText] = useState("");
   const nodeRef = useRef(null);

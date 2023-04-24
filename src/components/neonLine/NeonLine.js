@@ -6,7 +6,6 @@ export default function NeonLine() {
     let position = window.pageYOffset;
     setScrollPosition(position);
   });
-  console.log("scrollPosition", scrollPosition);
   return (
     <div>
       <div className="neon-line"></div>
